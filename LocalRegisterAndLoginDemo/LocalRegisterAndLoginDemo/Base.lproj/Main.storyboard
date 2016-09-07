@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FQD-1e-SSf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bEz-E2-HP5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenKeyboardAppears="YES" id="FQD-1e-SSf" customClass="YHNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8HQ-lR-kun">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.06069528875" green="0.51927179420000003" blue="0.70850351440000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.06069528875379937" green="0.51927179424316106" blue="0.70850351443769" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HjQ-gA-kMJ" kind="relationship" relationship="rootViewController" id="8nq-FO-0lM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2F-7K-QCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-434" y="136"/>
+        </scene>
+        <!--注册-->
+        <scene sceneID="XQc-gX-dLL">
+            <objects>
+                <viewController id="jIN-LP-RdF" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yme-BF-m9V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请填写注册信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yPY-B7-920">
+                                <rect key="frame" x="92" y="20" width="190" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入用户名（仅由字母或数字组成）" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="C23-Ld-M5w">
+                                <rect key="frame" x="20" y="71" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="jIN-LP-RdF" eventType="editingDidEndOnExit" id="jYP-QL-fTO"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" id="orJ-SD-g8v">
+                                <rect key="frame" x="20" y="106" width="335" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入密码（仅由字母或数字组成）" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="Zdg-0n-Su1">
+                                <rect key="frame" x="20" y="130" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="jIN-LP-RdF" eventType="editingDidEndOnExit" id="TLS-gK-f5I"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" id="nxf-wh-URX">
+                                <rect key="frame" x="20" y="165" width="335" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码（仅由字母或数字组成）" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="wax-gm-FO4">
+                                <rect key="frame" x="20" y="187" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="jIN-LP-RdF" eventType="editingDidEndOnExit" id="Rf8-up-IrN"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" id="SXV-GR-51f">
+                                <rect key="frame" x="20" y="222" width="335" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mC8-B6-oS9">
+                                <rect key="frame" x="65" y="265" width="245" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.097525645896656535" green="0.42822710866261399" blue="0.64118243041897416" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="注  册">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerBtnTap:" destination="jIN-LP-RdF" eventType="touchUpInside" id="827-wE-HR9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eZk-Od-CRR">
+                                <rect key="frame" x="65" y="325" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="已有账号？立即登录"/>
+                                <connections>
+                                    <action selector="toLoginPage:" destination="jIN-LP-RdF" eventType="touchUpInside" id="bJc-RY-sz7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Aut-bB-vBh" appends="YES" id="iVp-TI-DgZ"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="注册" id="p7p-Y4-jRu"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="confirmPassText" destination="wax-gm-FO4" id="g3l-nb-UgC"/>
+                        <outlet property="registerBtn" destination="mC8-B6-oS9" id="Ihd-nl-5JH"/>
+                        <outlet property="unameText" destination="C23-Ld-M5w" id="nxt-gQ-8zh"/>
+                        <outlet property="upassText" destination="Zdg-0n-Su1" id="vUj-Hs-Vpk"/>
+                        <segue destination="HjQ-gA-kMJ" kind="push" identifier="loginSegue" animates="NO" id="eLe-aE-A7U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddb-F9-Fu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Aut-bB-vBh">
+                    <connections>
+                        <action selector="tapToendEdit:" destination="jIN-LP-RdF" id="gGp-7P-9kh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-984.5" y="1078.5"/>
+        </scene>
+        <!--登录-->
+        <scene sceneID="d93-nB-3Eg">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="HjQ-gA-kMJ" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="INm-VI-Qnq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入登录信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="USA-R6-SXi">
+                                <rect key="frame" x="92" y="20" width="190" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sKJ-Ob-k4N">
+                                <rect key="frame" x="20" y="77" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="5RV-Ic-fDy">
+                                <rect key="frame" x="84" y="71" width="245" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="closeKB" destination="HjQ-gA-kMJ" eventType="editingDidEndOnExit" id="O2y-08-N16"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" id="PlQ-ne-y9t">
+                                <rect key="frame" x="84" y="107" width="245" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BBb-fy-svg">
+                                <rect key="frame" x="37" y="138" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="B1d-34-8ve">
+                                <rect key="frame" x="84" y="131" width="245" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB" destination="HjQ-gA-kMJ" eventType="editingDidEndOnExit" id="FKM-TY-f0U"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" id="zaj-Yv-oPG">
+                                <rect key="frame" x="84" y="166" width="245" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记住密码：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KAW-Wo-0Ju">
+                                <rect key="frame" x="20" y="185" width="85" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ICl-pK-qn6">
+                                <rect key="frame" x="65" y="236" width="245" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.097525645899999999" green="0.42822710870000003" blue="0.6411824304" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="登  录">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="HjQ-gA-kMJ" eventType="touchUpInside" id="CfN-fp-s75"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ozs-qg-lXr">
+                                <rect key="frame" x="65" y="293" width="148" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="没有账号？注册一个"/>
+                                <connections>
+                                    <action selector="toLoginPage:" destination="jIN-LP-RdF" eventType="touchUpInside" id="bK0-uf-5yl"/>
+                                    <action selector="toRegisterPager:" destination="HjQ-gA-kMJ" eventType="touchUpInside" id="hCu-mS-OwL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4BX-LU-UIn">
+                                <rect key="frame" x="65" y="333" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="修改用户名"/>
+                                <connections>
+                                    <action selector="modifyUserName:" destination="HjQ-gA-kMJ" eventType="touchUpInside" id="epY-H9-NCe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xsp-6y-iaJ">
+                                <rect key="frame" x="65" y="370" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="修改密码"/>
+                                <connections>
+                                    <action selector="modifyPassword:" destination="HjQ-gA-kMJ" eventType="touchUpInside" id="oWa-RS-Xfm"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="siz-V7-xbj" customClass="CustomSwitch">
+                                <rect key="frame" x="113" y="185" width="100" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="switchClick:" destination="HjQ-gA-kMJ" eventType="valueChanged" id="r8H-I6-zF6"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mwv-XY-Xmi">
+                                <rect key="frame" x="237" y="333" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="删除用户">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteUser:" destination="HjQ-gA-kMJ" eventType="touchUpInside" id="5nc-6e-F8Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hry-Id-uWX" appends="YES" id="vnK-jk-u4K"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="登录" id="dAN-WY-Rar"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="ICl-pK-qn6" id="Gld-GH-qmT"/>
+                        <outlet property="rememberLabel" destination="KAW-Wo-0Ju" id="Twz-Vn-KXG"/>
+                        <outlet property="switchOne" destination="siz-V7-xbj" id="x7P-Nf-ofs"/>
+                        <outlet property="unameText" destination="5RV-Ic-fDy" id="lac-r2-P2N"/>
+                        <outlet property="upassText" destination="B1d-34-8ve" id="mKc-se-yJe"/>
+                        <segue destination="jIN-LP-RdF" kind="push" identifier="registerSegue" animates="NO" id="t0a-Tm-IJW"/>
+                        <segue destination="vMP-B2-jYM" kind="push" identifier="toMainPage" id="6SR-JF-oC5"/>
+                        <segue destination="PRF-0v-pHo" kind="push" identifier="toModifyUserName" id="RZr-yh-Pca"/>
+                        <segue destination="pQi-F7-6XR" kind="push" identifier="toModifyPassword" id="PuR-0Z-6XV"/>
+                        <segue destination="wp3-h3-9xW" kind="push" identifier="toDeleteUser" id="inS-Tr-9hP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phl-Fm-ECU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hry-Id-uWX">
+                    <connections>
+                        <action selector="tapToEndEdit:" destination="HjQ-gA-kMJ" id="Qb6-0Y-jBR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-371.5" y="1078.5"/>
+        </scene>
+        <!--修改用户名-->
+        <scene sceneID="uoC-bY-Zgg">
+            <objects>
+                <viewController id="PRF-0v-pHo" customClass="ModifyUserNameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="73U-da-jC4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入旧用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="y26-hT-Xxm">
+                                <rect key="frame" x="20" y="34" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="PRF-0v-pHo" eventType="editingDidEndOnExit" id="rtU-BN-kcc"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入新用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="1Ex-es-ugI">
+                                <rect key="frame" x="20" y="144" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="PRF-0v-pHo" eventType="editingDidEndOnExit" id="O2n-rg-bvq"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示：用户名只能由数字或字母构成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XR5-2x-ygv">
+                                <rect key="frame" x="20" y="194" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AIP-gW-vtU">
+                                <rect key="frame" x="65" y="256" width="245" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06069528875" green="0.51927179420000003" blue="0.70850351440000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="提交"/>
+                                <connections>
+                                    <action selector="saveTap:" destination="PRF-0v-pHo" eventType="touchUpInside" id="iSC-Cr-Y0U"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="kdh-2P-EYj">
+                                <rect key="frame" x="20" y="88" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="PRF-0v-pHo" eventType="editingDidEndOnExit" id="yxM-iL-sef"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="PNy-Wg-Ahx" appends="YES" id="44o-jS-Vwd"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="修改用户名" id="i0I-7l-4CV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4rr-nK-FXI">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelTap:" destination="PRF-0v-pHo" id="Iwc-W9-UZM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myNewUnameText" destination="1Ex-es-ugI" id="QAx-rP-3kl"/>
+                        <outlet property="oldUnameText" destination="y26-hT-Xxm" id="XuY-TE-upy"/>
+                        <outlet property="upassText" destination="kdh-2P-EYj" id="bGZ-Ic-Ogr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEu-Vx-Jla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PNy-Wg-Ahx">
+                    <connections>
+                        <action selector="endEdit:" destination="PRF-0v-pHo" id="zLm-rP-asX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-665.5" y="2054.5"/>
+        </scene>
+        <!--修改密码-->
+        <scene sceneID="EK4-j1-eha">
+            <objects>
+                <viewController id="pQi-F7-6XR" customClass="ModifyPasswordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ik-Qw-O0W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入旧密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="hLC-va-0iI">
+                                <rect key="frame" x="20" y="79" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="pQi-F7-6XR" eventType="editingDidEndOnExit" id="ur0-vR-Pdm"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示：密码只能由数字或字母构成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vrB-G5-n7W">
+                                <rect key="frame" x="20" y="251" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wN5-hH-lSL">
+                                <rect key="frame" x="65" y="313" width="245" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06069528875" green="0.51927179420000003" blue="0.70850351440000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="提交"/>
+                                <connections>
+                                    <action selector="saveTap:" destination="pQi-F7-6XR" eventType="touchUpInside" id="5h7-Lx-pyP"/>
+                                    <action selector="saveTap:" destination="PRF-0v-pHo" eventType="touchUpInside" id="dWb-Qd-xty"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入您的用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="2YI-5N-UVE">
+                                <rect key="frame" x="20" y="20" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="pQi-F7-6XR" eventType="editingDidEndOnExit" id="PzV-2A-Kuk"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入新密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="Arx-6i-V0Y">
+                                <rect key="frame" x="20" y="138" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="pQi-F7-6XR" eventType="editingDidEndOnExit" id="qRQ-Wg-tZU"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认新密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="NBR-fg-BuN">
+                                <rect key="frame" x="20" y="196" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="pQi-F7-6XR" eventType="editingDidEndOnExit" id="GZ8-B4-VOY"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Qlk-rW-yWp" appends="YES" id="JvK-Dy-Naq"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="修改密码" id="rg2-ip-TVx">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="C2l-Sz-aL9">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelTap:" destination="pQi-F7-6XR" id="Shd-mJ-0ND"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="confirmNewPassText" destination="NBR-fg-BuN" id="HXL-A0-SI8"/>
+                        <outlet property="myNewPassText" destination="Arx-6i-V0Y" id="EbG-G8-Imy"/>
+                        <outlet property="oldPassText" destination="hLC-va-0iI" id="dCx-Ig-9JY"/>
+                        <outlet property="unameText" destination="2YI-5N-UVE" id="HWP-Ca-WM0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRz-eG-ZgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Qlk-rW-yWp">
+                    <connections>
+                        <action selector="endEdit:" destination="pQi-F7-6XR" id="Uer-xI-8nL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-131.5" y="2054.5"/>
+        </scene>
+        <!--删除用户-->
+        <scene sceneID="7UP-CI-0TT">
+            <objects>
+                <viewController id="wp3-h3-9xW" customClass="DeleteUserViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iYv-gU-qlJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="NoZ-4I-TWc">
+                                <rect key="frame" x="20" y="136" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="wp3-h3-9xW" eventType="editingDidEndOnExit" id="WXs-YX-np4"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入要删除的用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="U3N-Zm-dPc">
+                                <rect key="frame" x="20" y="68" width="335" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="closeKB:" destination="wp3-h3-9xW" eventType="editingDidEndOnExit" id="yoD-Vl-7eb"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nb7-hV-VaY" appends="YES" id="Ozp-nb-9Xb"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="删除用户" id="sKH-aW-zBV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="x6k-2n-YzV">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelTap:" destination="wp3-h3-9xW" id="W6B-W9-aal"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="KqK-U4-oCT">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deleteTap:" destination="wp3-h3-9xW" id="U4Y-Rp-qvJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="unameText" destination="U3N-Zm-dPc" id="i28-V3-Rkb"/>
+                        <outlet property="upassText" destination="NoZ-4I-TWc" id="3O4-I7-J1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0z-up-faK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nb7-hV-VaY">
+                    <connections>
+                        <action selector="endEdit:" destination="wp3-h3-9xW" id="G1r-bn-2KQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="358.5" y="1886.5"/>
+        </scene>
+        <!--学生成绩查询系统-->
+        <scene sceneID="jJj-an-LEO">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vMP-B2-jYM" customClass="MainPageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q5u-dt-XRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="chH-Q4-g1Z">
+                                <rect key="frame" x="100" y="319" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06069528875" green="0.51927179420000003" blue="0.70850351440000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="退出系统">
+                                    <color key="titleColor" red="0.62783292769999999" green="1" blue="0.82712765960000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="quit:" destination="vMP-B2-jYM" eventType="touchUpInside" id="fK3-fK-mjp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="学生成绩查询系统" id="hyM-Lb-Pp6"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="HjQ-gA-kMJ" kind="push" identifier="backToLoginSegue" id="kYm-Nc-zgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DxI-0e-797" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.5" y="1078.5"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eLe-aE-A7U"/>
+    </inferredMetricsTieBreakers>
+</document>

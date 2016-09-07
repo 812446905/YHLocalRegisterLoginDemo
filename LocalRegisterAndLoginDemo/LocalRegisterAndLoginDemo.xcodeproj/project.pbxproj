@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF259AB91D7D1ECF0084CE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259AB81D7D1ECF0084CE96 /* main.m */; };
+		EF259ABC1D7D1ECF0084CE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259ABB1D7D1ECF0084CE96 /* AppDelegate.m */; };
+		EF259AC21D7D1ECF0084CE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259AC01D7D1ECF0084CE96 /* Main.storyboard */; };
+		EF259AC41D7D1ECF0084CE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF259AC31D7D1ECF0084CE96 /* Assets.xcassets */; };
+		EF259AC71D7D1ECF0084CE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259AC51D7D1ECF0084CE96 /* LaunchScreen.storyboard */; };
+		EF259AD21D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259AD11D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.m */; };
+		EF259ADE1D7D2FE60084CE96 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259ADD1D7D2FE60084CE96 /* RegisterViewController.m */; };
+		EF259AE11D7D2FFB0084CE96 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259AE01D7D2FFB0084CE96 /* LoginViewController.m */; };
+		EF259AE41D7D3AE80084CE96 /* YHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259AE31D7D3AE80084CE96 /* YHNavigationController.m */; };
+		EF259AF91D7DA2850084CE96 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF259AF81D7DA2850084CE96 /* libsqlite3.tbd */; };
+		EF259AFC1D7DB9F30084CE96 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259AFB1D7DB9F30084CE96 /* MainPageViewController.m */; };
+		EF259AFF1D7DBD900084CE96 /* YHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259AFE1D7DBD900084CE96 /* YHUtil.m */; };
+		EF259B0B1D7DC4040084CE96 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B021D7DC4040084CE96 /* SVIndefiniteAnimatedView.m */; };
+		EF259B0C1D7DC4040084CE96 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B041D7DC4040084CE96 /* SVProgressAnimatedView.m */; };
+		EF259B0D1D7DC4040084CE96 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF259B061D7DC4040084CE96 /* SVProgressHUD.bundle */; };
+		EF259B0E1D7DC4040084CE96 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B081D7DC4040084CE96 /* SVProgressHUD.m */; };
+		EF259B0F1D7DC4040084CE96 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B0A1D7DC4040084CE96 /* SVRadialGradientLayer.m */; };
+		EF259B121D7DD0CF0084CE96 /* YHDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B111D7DD0CF0084CE96 /* YHDatabase.m */; };
+		EF259B281D7E5AA90084CE96 /* NSString+equalString.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B271D7E5AA90084CE96 /* NSString+equalString.m */; };
+		EF259B2E1D7E8F2D0084CE96 /* CustomSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B2C1D7E8F2D0084CE96 /* CustomSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EF259B2F1D7E8F2D0084CE96 /* CustomSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF259B2D1D7E8F2D0084CE96 /* CustomSwitch.xib */; };
+		EF259B321D7EA8390084CE96 /* ModifyUserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B311D7EA8390084CE96 /* ModifyUserNameViewController.m */; };
+		EF259B351D7EA9CD0084CE96 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B341D7EA9CD0084CE96 /* ModifyPasswordViewController.m */; };
+		EF259B381D7EF76A0084CE96 /* DeleteUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF259B371D7EF76A0084CE96 /* DeleteUserViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF259ACE1D7D1ECF0084CE96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF259AAC1D7D1ECF0084CE96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF259AB31D7D1ECF0084CE96;
+			remoteInfo = LocalRegisterAndLoginDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF259AB41D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalRegisterAndLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF259AB81D7D1ECF0084CE96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF259ABA1D7D1ECF0084CE96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF259ABB1D7D1ECF0084CE96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF259AC11D7D1ECF0084CE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF259AC31D7D1ECF0084CE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF259AC61D7D1ECF0084CE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF259AC81D7D1ECF0084CE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF259ACD1D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalRegisterAndLoginDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF259AD11D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalRegisterAndLoginDemoTests.m; sourceTree = "<group>"; };
+		EF259AD31D7D1ECF0084CE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF259ADC1D7D2FE60084CE96 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		EF259ADD1D7D2FE60084CE96 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		EF259ADF1D7D2FFB0084CE96 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EF259AE01D7D2FFB0084CE96 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EF259AE21D7D3AE80084CE96 /* YHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNavigationController.h; sourceTree = "<group>"; };
+		EF259AE31D7D3AE80084CE96 /* YHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNavigationController.m; sourceTree = "<group>"; };
+		EF259AF61D7DA24A0084CE96 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		EF259AF71D7DA24A0084CE96 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EF259AF81D7DA2850084CE96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		EF259AFA1D7DB9F30084CE96 /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
+		EF259AFB1D7DB9F30084CE96 /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
+		EF259AFD1D7DBD900084CE96 /* YHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHUtil.h; sourceTree = "<group>"; };
+		EF259AFE1D7DBD900084CE96 /* YHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHUtil.m; sourceTree = "<group>"; };
+		EF259B011D7DC4040084CE96 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		EF259B021D7DC4040084CE96 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		EF259B031D7DC4040084CE96 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		EF259B041D7DC4040084CE96 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		EF259B051D7DC4040084CE96 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		EF259B061D7DC4040084CE96 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		EF259B071D7DC4040084CE96 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		EF259B081D7DC4040084CE96 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		EF259B091D7DC4040084CE96 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		EF259B0A1D7DC4040084CE96 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		EF259B101D7DD0CF0084CE96 /* YHDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDatabase.h; sourceTree = "<group>"; };
+		EF259B111D7DD0CF0084CE96 /* YHDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDatabase.m; sourceTree = "<group>"; };
+		EF259B261D7E5AA90084CE96 /* NSString+equalString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+equalString.h"; sourceTree = "<group>"; };
+		EF259B271D7E5AA90084CE96 /* NSString+equalString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+equalString.m"; sourceTree = "<group>"; };
+		EF259B2B1D7E8F2D0084CE96 /* CustomSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSwitch.h; sourceTree = "<group>"; };
+		EF259B2C1D7E8F2D0084CE96 /* CustomSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSwitch.m; sourceTree = "<group>"; };
+		EF259B2D1D7E8F2D0084CE96 /* CustomSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSwitch.xib; sourceTree = "<group>"; };
+		EF259B301D7EA8390084CE96 /* ModifyUserNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyUserNameViewController.h; sourceTree = "<group>"; };
+		EF259B311D7EA8390084CE96 /* ModifyUserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyUserNameViewController.m; sourceTree = "<group>"; };
+		EF259B331D7EA9CD0084CE96 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
+		EF259B341D7EA9CD0084CE96 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
+		EF259B361D7EF76A0084CE96 /* DeleteUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteUserViewController.h; sourceTree = "<group>"; };
+		EF259B371D7EF76A0084CE96 /* DeleteUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteUserViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF259AB11D7D1ECF0084CE96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF259AF91D7DA2850084CE96 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF259ACA1D7D1ECF0084CE96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF259AAB1D7D1ECF0084CE96 = {
+			isa = PBXGroup;
+			children = (
+				EF259AF81D7DA2850084CE96 /* libsqlite3.tbd */,
+				EF259AB61D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo */,
+				EF259AD01D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests */,
+				EF259AB51D7D1ECF0084CE96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF259AB51D7D1ECF0084CE96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF259AB41D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo.app */,
+				EF259ACD1D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF259AB61D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EF259B3B1D7F03FA0084CE96 /* other */,
+				EF259B3A1D7F03C80084CE96 /* register(注册) */,
+				EF259B391D7F03670084CE96 /* login(登录) */,
+				EF259B3E1D7F04830084CE96 /* mainPage(登录后的主界面) */,
+				EF259B3D1D7F04640084CE96 /* delete(删除) */,
+				EF259B3C1D7F04450084CE96 /* modify(修改) */,
+				EF259AC01D7D1ECF0084CE96 /* Main.storyboard */,
+				EF259AC31D7D1ECF0084CE96 /* Assets.xcassets */,
+				EF259AC51D7D1ECF0084CE96 /* LaunchScreen.storyboard */,
+				EF259AC81D7D1ECF0084CE96 /* Info.plist */,
+				EF259AB71D7D1ECF0084CE96 /* Supporting Files */,
+			);
+			path = LocalRegisterAndLoginDemo;
+			sourceTree = "<group>";
+		};
+		EF259AB71D7D1ECF0084CE96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF259AB81D7D1ECF0084CE96 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF259AD01D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF259AD11D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.m */,
+				EF259AD31D7D1ECF0084CE96 /* Info.plist */,
+			);
+			path = LocalRegisterAndLoginDemoTests;
+			sourceTree = "<group>";
+		};
+		EF259B001D7DC4040084CE96 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EF259B011D7DC4040084CE96 /* SVIndefiniteAnimatedView.h */,
+				EF259B021D7DC4040084CE96 /* SVIndefiniteAnimatedView.m */,
+				EF259B031D7DC4040084CE96 /* SVProgressAnimatedView.h */,
+				EF259B041D7DC4040084CE96 /* SVProgressAnimatedView.m */,
+				EF259B051D7DC4040084CE96 /* SVProgressHUD-Prefix.pch */,
+				EF259B061D7DC4040084CE96 /* SVProgressHUD.bundle */,
+				EF259B071D7DC4040084CE96 /* SVProgressHUD.h */,
+				EF259B081D7DC4040084CE96 /* SVProgressHUD.m */,
+				EF259B091D7DC4040084CE96 /* SVRadialGradientLayer.h */,
+				EF259B0A1D7DC4040084CE96 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		EF259B391D7F03670084CE96 /* login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				EF259ADF1D7D2FFB0084CE96 /* LoginViewController.h */,
+				EF259AE01D7D2FFB0084CE96 /* LoginViewController.m */,
+			);
+			name = "login(登录)";
+			sourceTree = "<group>";
+		};
+		EF259B3A1D7F03C80084CE96 /* register(注册) */ = {
+			isa = PBXGroup;
+			children = (
+				EF259ADC1D7D2FE60084CE96 /* RegisterViewController.h */,
+				EF259ADD1D7D2FE60084CE96 /* RegisterViewController.m */,
+			);
+			name = "register(注册)";
+			sourceTree = "<group>";
+		};
+		EF259B3B1D7F03FA0084CE96 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				EF259B001D7DC4040084CE96 /* SVProgressHUD */,
+				EF259B101D7DD0CF0084CE96 /* YHDatabase.h */,
+				EF259B111D7DD0CF0084CE96 /* YHDatabase.m */,
+				EF259B261D7E5AA90084CE96 /* NSString+equalString.h */,
+				EF259B271D7E5AA90084CE96 /* NSString+equalString.m */,
+				EF259B2B1D7E8F2D0084CE96 /* CustomSwitch.h */,
+				EF259B2C1D7E8F2D0084CE96 /* CustomSwitch.m */,
+				EF259B2D1D7E8F2D0084CE96 /* CustomSwitch.xib */,
+				EF259ABA1D7D1ECF0084CE96 /* AppDelegate.h */,
+				EF259ABB1D7D1ECF0084CE96 /* AppDelegate.m */,
+				EF259AE21D7D3AE80084CE96 /* YHNavigationController.h */,
+				EF259AE31D7D3AE80084CE96 /* YHNavigationController.m */,
+				EF259AFD1D7DBD900084CE96 /* YHUtil.h */,
+				EF259AFE1D7DBD900084CE96 /* YHUtil.m */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
+		EF259B3C1D7F04450084CE96 /* modify(修改) */ = {
+			isa = PBXGroup;
+			children = (
+				EF259B301D7EA8390084CE96 /* ModifyUserNameViewController.h */,
+				EF259B311D7EA8390084CE96 /* ModifyUserNameViewController.m */,
+				EF259B331D7EA9CD0084CE96 /* ModifyPasswordViewController.h */,
+				EF259B341D7EA9CD0084CE96 /* ModifyPasswordViewController.m */,
+			);
+			name = "modify(修改)";
+			sourceTree = "<group>";
+		};
+		EF259B3D1D7F04640084CE96 /* delete(删除) */ = {
+			isa = PBXGroup;
+			children = (
+				EF259B361D7EF76A0084CE96 /* DeleteUserViewController.h */,
+				EF259B371D7EF76A0084CE96 /* DeleteUserViewController.m */,
+			);
+			name = "delete(删除)";
+			sourceTree = "<group>";
+		};
+		EF259B3E1D7F04830084CE96 /* mainPage(登录后的主界面) */ = {
+			isa = PBXGroup;
+			children = (
+				EF259AFA1D7DB9F30084CE96 /* MainPageViewController.h */,
+				EF259AFB1D7DB9F30084CE96 /* MainPageViewController.m */,
+			);
+			name = "mainPage(登录后的主界面)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF259AB31D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF259AD61D7D1ECF0084CE96 /* Build configuration list for PBXNativeTarget "LocalRegisterAndLoginDemo" */;
+			buildPhases = (
+				EF259AB01D7D1ECF0084CE96 /* Sources */,
+				EF259AB11D7D1ECF0084CE96 /* Frameworks */,
+				EF259AB21D7D1ECF0084CE96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalRegisterAndLoginDemo;
+			productName = LocalRegisterAndLoginDemo;
+			productReference = EF259AB41D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF259ACC1D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF259AD91D7D1ECF0084CE96 /* Build configuration list for PBXNativeTarget "LocalRegisterAndLoginDemoTests" */;
+			buildPhases = (
+				EF259AC91D7D1ECF0084CE96 /* Sources */,
+				EF259ACA1D7D1ECF0084CE96 /* Frameworks */,
+				EF259ACB1D7D1ECF0084CE96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF259ACF1D7D1ECF0084CE96 /* PBXTargetDependency */,
+			);
+			name = LocalRegisterAndLoginDemoTests;
+			productName = LocalRegisterAndLoginDemoTests;
+			productReference = EF259ACD1D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF259AAC1D7D1ECF0084CE96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "闫合";
+				TargetAttributes = {
+					EF259AB31D7D1ECF0084CE96 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ASJRZUNWE7;
+					};
+					EF259ACC1D7D1ECF0084CE96 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ASJRZUNWE7;
+						TestTargetID = EF259AB31D7D1ECF0084CE96;
+					};
+				};
+			};
+			buildConfigurationList = EF259AAF1D7D1ECF0084CE96 /* Build configuration list for PBXProject "LocalRegisterAndLoginDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF259AAB1D7D1ECF0084CE96;
+			productRefGroup = EF259AB51D7D1ECF0084CE96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF259AB31D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo */,
+				EF259ACC1D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF259AB21D7D1ECF0084CE96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF259AC71D7D1ECF0084CE96 /* LaunchScreen.storyboard in Resources */,
+				EF259AC41D7D1ECF0084CE96 /* Assets.xcassets in Resources */,
+				EF259B2F1D7E8F2D0084CE96 /* CustomSwitch.xib in Resources */,
+				EF259AC21D7D1ECF0084CE96 /* Main.storyboard in Resources */,
+				EF259B0D1D7DC4040084CE96 /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF259ACB1D7D1ECF0084CE96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF259AB01D7D1ECF0084CE96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF259AE41D7D3AE80084CE96 /* YHNavigationController.m in Sources */,
+				EF259B281D7E5AA90084CE96 /* NSString+equalString.m in Sources */,
+				EF259B0C1D7DC4040084CE96 /* SVProgressAnimatedView.m in Sources */,
+				EF259B351D7EA9CD0084CE96 /* ModifyPasswordViewController.m in Sources */,
+				EF259AE11D7D2FFB0084CE96 /* LoginViewController.m in Sources */,
+				EF259B0B1D7DC4040084CE96 /* SVIndefiniteAnimatedView.m in Sources */,
+				EF259B321D7EA8390084CE96 /* ModifyUserNameViewController.m in Sources */,
+				EF259B121D7DD0CF0084CE96 /* YHDatabase.m in Sources */,
+				EF259AFF1D7DBD900084CE96 /* YHUtil.m in Sources */,
+				EF259ABC1D7D1ECF0084CE96 /* AppDelegate.m in Sources */,
+				EF259ADE1D7D2FE60084CE96 /* RegisterViewController.m in Sources */,
+				EF259B0F1D7DC4040084CE96 /* SVRadialGradientLayer.m in Sources */,
+				EF259AFC1D7DB9F30084CE96 /* MainPageViewController.m in Sources */,
+				EF259B0E1D7DC4040084CE96 /* SVProgressHUD.m in Sources */,
+				EF259AB91D7D1ECF0084CE96 /* main.m in Sources */,
+				EF259B381D7EF76A0084CE96 /* DeleteUserViewController.m in Sources */,
+				EF259B2E1D7E8F2D0084CE96 /* CustomSwitch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF259AC91D7D1ECF0084CE96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF259AD21D7D1ECF0084CE96 /* LocalRegisterAndLoginDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF259ACF1D7D1ECF0084CE96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF259AB31D7D1ECF0084CE96 /* LocalRegisterAndLoginDemo */;
+			targetProxy = EF259ACE1D7D1ECF0084CE96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF259AC01D7D1ECF0084CE96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF259AC11D7D1ECF0084CE96 /* Base */,
+				EF259AF61D7DA24A0084CE96 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF259AC51D7D1ECF0084CE96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF259AC61D7D1ECF0084CE96 /* Base */,
+				EF259AF71D7DA24A0084CE96 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF259AD41D7D1ECF0084CE96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF259AD51D7D1ECF0084CE96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF259AD71D7D1ECF0084CE96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LocalRegisterAndLoginDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.LocalRegisterAndLoginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF259AD81D7D1ECF0084CE96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LocalRegisterAndLoginDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.LocalRegisterAndLoginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF259ADA1D7D1ECF0084CE96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LocalRegisterAndLoginDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.LocalRegisterAndLoginDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalRegisterAndLoginDemo.app/LocalRegisterAndLoginDemo";
+			};
+			name = Debug;
+		};
+		EF259ADB1D7D1ECF0084CE96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LocalRegisterAndLoginDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.LocalRegisterAndLoginDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalRegisterAndLoginDemo.app/LocalRegisterAndLoginDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF259AAF1D7D1ECF0084CE96 /* Build configuration list for PBXProject "LocalRegisterAndLoginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF259AD41D7D1ECF0084CE96 /* Debug */,
+				EF259AD51D7D1ECF0084CE96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF259AD61D7D1ECF0084CE96 /* Build configuration list for PBXNativeTarget "LocalRegisterAndLoginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF259AD71D7D1ECF0084CE96 /* Debug */,
+				EF259AD81D7D1ECF0084CE96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF259AD91D7D1ECF0084CE96 /* Build configuration list for PBXNativeTarget "LocalRegisterAndLoginDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF259ADA1D7D1ECF0084CE96 /* Debug */,
+				EF259ADB1D7D1ECF0084CE96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF259AAC1D7D1ECF0084CE96 /* Project object */;
+}
