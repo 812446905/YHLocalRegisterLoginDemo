@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "请输入文字内容："; ObjectID = "58z-QG-E53"; */
+"58z-QG-E53.text" = "请输入文字内容：";
+
+/* Class = "UITabBarItem"; title = "控件集合"; ObjectID = "79G-pm-S7L"; */
+"79G-pm-S7L.title" = "控件集合";
+
+/* Class = "UITextField"; placeholder = "请输入内容"; ObjectID = "98R-y5-dLW"; */
+"98R-y5-dLW.placeholder" = "请输入内容";
+
+/* Class = "UILabel"; text = "R"; ObjectID = "Gaw-i5-D9G"; */
+"Gaw-i5-D9G.text" = "R";
+
+/* Class = "UINavigationItem"; title = "显示结果"; ObjectID = "ISt-oW-oS9"; */
+"ISt-oW-oS9.title" = "显示结果";
+
+/* Class = "UILabel"; text = "ABCDE                 12345                              "; ObjectID = "Q8R-yB-ksi"; */
+"Q8R-yB-ksi.text" = "ABCDE                 12345                              ";
+
+/* Class = "UITabBarItem"; title = "文字设置"; ObjectID = "TEO-G7-RpQ"; */
+"TEO-G7-RpQ.title" = "文字设置";
+
+/* Class = "UILabel"; text = "设置字号大小"; ObjectID = "TRn-Pb-KDq"; */
+"TRn-Pb-KDq.text" = "设置字号大小";
+
+/* Class = "UILabel"; text = "G"; ObjectID = "XT3-hq-k9o"; */
+"XT3-hq-k9o.text" = "G";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "ZbM-ub-JXT"; */
+"ZbM-ub-JXT.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "设置文字颜色"; ObjectID = "Zzo-gK-07T"; */
+"Zzo-gK-07T.text" = "设置文字颜色";
+
+/* Class = "UIBarButtonItem"; title = "返回首页"; ObjectID = "cUh-KF-WOP"; */
+"cUh-KF-WOP.title" = "返回首页";
+
+/* Class = "UINavigationItem"; title = "文字内容"; ObjectID = "hkP-W9-G7o"; */
+"hkP-W9-G7o.title" = "文字内容";
+
+/* Class = "UINavigationItem"; title = "设置字体"; ObjectID = "j0W-h9-jKd"; */
+"j0W-h9-jKd.title" = "设置字体";
+
+/* Class = "UINavigationItem"; title = "合集"; ObjectID = "jIu-A6-XLD"; */
+"jIu-A6-XLD.title" = "合集";
+
+/* Class = "UILabel"; text = "ABCDE                 12345                              "; ObjectID = "mTB-Yz-dpu"; */
+"mTB-Yz-dpu.text" = "ABCDE                 12345                              ";
+
+/* Class = "UITabBarItem"; title = "控件集合"; ObjectID = "oAh-xh-ugw"; */
+"oAh-xh-ugw.title" = "控件集合";
+
+/* Class = "UILabel"; text = "B"; ObjectID = "pgy-XP-0f9"; */
+"pgy-XP-0f9.text" = "B";
+
+/* Class = "UITableViewController"; title = "文字内容"; ObjectID = "wHb-Mv-2BM"; */
+"wHb-Mv-2BM.title" = "文字内容";
+
+/* Class = "UIBarButtonItem"; title = "保存"; ObjectID = "yuE-Ix-bh3"; */
+"yuE-Ix-bh3.title" = "保存";
+
+/* Class = "UINavigationItem"; title = "设置字号和颜色"; ObjectID = "z7V-dQ-02O"; */
+"z7V-dQ-02O.title" = "设置字号和颜色";
+
+/* Class = "UILabel"; text = "16"; ObjectID = "zX6-My-V8Z"; */
+"zX6-My-V8Z.text" = "16";

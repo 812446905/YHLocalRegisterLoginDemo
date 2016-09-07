@@ -1,0 +1,15 @@
+//
+//  WYWeiboPrefixHeader.pch
+//  沃赢微博
+//
+//  Created by 闫合 on 16/8/12.
+//  Copyright © 2016年 闫合. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "UIView+Extension.h"
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#endif

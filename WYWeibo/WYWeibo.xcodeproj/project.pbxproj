@@ -1,0 +1,802 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF368A7C1D5E29E200206A96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368A7B1D5E29E200206A96 /* main.m */; };
+		EF368A8A1D5E29E200206A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF368A881D5E29E200206A96 /* LaunchScreen.storyboard */; };
+		EF368A951D5E29E200206A96 /* WYWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368A941D5E29E200206A96 /* WYWeiboTests.m */; };
+		EF368AC41D5E2A6800206A96 /* WYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AA51D5E2A6800206A96 /* WYDiscoverViewController.m */; };
+		EF368AC51D5E2A6800206A96 /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AA91D5E2A6800206A96 /* WYHomeViewController.m */; };
+		EF368AC61D5E2A6800206A96 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AAD1D5E2A6800206A96 /* UIView+Extension.m */; };
+		EF368AC71D5E2A6800206A96 /* WYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AB01D5E2A6800206A96 /* WYNavigationController.m */; };
+		EF368AC81D5E2A6800206A96 /* WYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AB21D5E2A6800206A96 /* WYTabBarController.m */; };
+		EF368AC91D5E2A6800206A96 /* WYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AB51D5E2A6800206A96 /* WYTabBar.m */; };
+		EF368ACA1D5E2A6800206A96 /* WYMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AB91D5E2A6800206A96 /* WYMessageCenterViewController.m */; };
+		EF368ACB1D5E2A6800206A96 /* WYNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368ABD1D5E2A6800206A96 /* WYNewFeatureViewController.m */; };
+		EF368ACC1D5E2A6800206A96 /* WYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AC11D5E2A6800206A96 /* WYProfileViewController.m */; };
+		EF368ACE1D5E2B2A00206A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF368ACD1D5E2B2A00206A96 /* Assets.xcassets */; };
+		EF368AD21D5E2C2C00206A96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF368AD11D5E2C2C00206A96 /* AppDelegate.m */; };
+		EF9B47E81D6159A300FD31DB /* WYOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B47E71D6159A300FD31DB /* WYOAuthViewController.m */; };
+		EF9B483C1D61939900FD31DB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B482A1D61939900FD31DB /* AFHTTPRequestOperation.m */; };
+		EF9B483D1D61939900FD31DB /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B482C1D61939900FD31DB /* AFHTTPRequestOperationManager.m */; };
+		EF9B483E1D61939900FD31DB /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B482E1D61939900FD31DB /* AFHTTPSessionManager.m */; };
+		EF9B483F1D61939900FD31DB /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B48311D61939900FD31DB /* AFNetworkReachabilityManager.m */; };
+		EF9B48401D61939900FD31DB /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B48331D61939900FD31DB /* AFSecurityPolicy.m */; };
+		EF9B48411D61939900FD31DB /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B48351D61939900FD31DB /* AFURLConnectionOperation.m */; };
+		EF9B48421D61939900FD31DB /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B48371D61939900FD31DB /* AFURLRequestSerialization.m */; };
+		EF9B48431D61939900FD31DB /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B48391D61939900FD31DB /* AFURLResponseSerialization.m */; };
+		EF9B48441D61939900FD31DB /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B483B1D61939900FD31DB /* AFURLSessionManager.m */; };
+		EF9B48481D619A9900FD31DB /* WYAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B48471D619A9900FD31DB /* WYAccount.m */; };
+		EF9B484D1D619FE900FD31DB /* WYAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B484C1D619FE900FD31DB /* WYAccountTool.m */; };
+		EF9B48501D61DA6400FD31DB /* WYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B484F1D61DA6400FD31DB /* WYUser.m */; };
+		EF9B48531D61DA8100FD31DB /* WYStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B48521D61DA8100FD31DB /* WYStatus.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF368A911D5E29E200206A96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF368A6F1D5E29E200206A96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF368A761D5E29E200206A96;
+			remoteInfo = WYWeibo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF368A771D5E29E200206A96 /* WYWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF368A7B1D5E29E200206A96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF368A891D5E29E200206A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF368A8B1D5E29E200206A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF368A901D5E29E200206A96 /* WYWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF368A941D5E29E200206A96 /* WYWeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYWeiboTests.m; sourceTree = "<group>"; };
+		EF368A961D5E29E200206A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF368AA41D5E2A6800206A96 /* WYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDiscoverViewController.h; sourceTree = "<group>"; };
+		EF368AA51D5E2A6800206A96 /* WYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDiscoverViewController.m; sourceTree = "<group>"; };
+		EF368AA81D5E2A6800206A96 /* WYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHomeViewController.h; sourceTree = "<group>"; };
+		EF368AA91D5E2A6800206A96 /* WYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHomeViewController.m; sourceTree = "<group>"; };
+		EF368AAC1D5E2A6800206A96 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		EF368AAD1D5E2A6800206A96 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		EF368AAF1D5E2A6800206A96 /* WYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNavigationController.h; sourceTree = "<group>"; };
+		EF368AB01D5E2A6800206A96 /* WYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNavigationController.m; sourceTree = "<group>"; };
+		EF368AB11D5E2A6800206A96 /* WYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTabBarController.h; sourceTree = "<group>"; };
+		EF368AB21D5E2A6800206A96 /* WYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTabBarController.m; sourceTree = "<group>"; };
+		EF368AB41D5E2A6800206A96 /* WYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTabBar.h; sourceTree = "<group>"; };
+		EF368AB51D5E2A6800206A96 /* WYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTabBar.m; sourceTree = "<group>"; };
+		EF368AB81D5E2A6800206A96 /* WYMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMessageCenterViewController.h; sourceTree = "<group>"; };
+		EF368AB91D5E2A6800206A96 /* WYMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMessageCenterViewController.m; sourceTree = "<group>"; };
+		EF368ABC1D5E2A6800206A96 /* WYNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewFeatureViewController.h; sourceTree = "<group>"; };
+		EF368ABD1D5E2A6800206A96 /* WYNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewFeatureViewController.m; sourceTree = "<group>"; };
+		EF368AC01D5E2A6800206A96 /* WYProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYProfileViewController.h; sourceTree = "<group>"; };
+		EF368AC11D5E2A6800206A96 /* WYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYProfileViewController.m; sourceTree = "<group>"; };
+		EF368AC21D5E2A6800206A96 /* WYWeiboPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWeiboPrefixHeader.pch; sourceTree = "<group>"; };
+		EF368ACD1D5E2B2A00206A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF368AD01D5E2C2C00206A96 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Other/AppDelegate.h; sourceTree = "<group>"; };
+		EF368AD11D5E2C2C00206A96 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Other/AppDelegate.m; sourceTree = "<group>"; };
+		EF9B47E61D6159A300FD31DB /* WYOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYOAuthViewController.h; path = "OAuth(授权)/WYOAuthViewController.h"; sourceTree = "<group>"; };
+		EF9B47E71D6159A300FD31DB /* WYOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYOAuthViewController.m; path = "OAuth(授权)/WYOAuthViewController.m"; sourceTree = "<group>"; };
+		EF9B48291D61939900FD31DB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		EF9B482A1D61939900FD31DB /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		EF9B482B1D61939900FD31DB /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		EF9B482C1D61939900FD31DB /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		EF9B482D1D61939900FD31DB /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		EF9B482E1D61939900FD31DB /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		EF9B482F1D61939900FD31DB /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		EF9B48301D61939900FD31DB /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		EF9B48311D61939900FD31DB /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		EF9B48321D61939900FD31DB /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		EF9B48331D61939900FD31DB /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		EF9B48341D61939900FD31DB /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		EF9B48351D61939900FD31DB /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		EF9B48361D61939900FD31DB /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		EF9B48371D61939900FD31DB /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		EF9B48381D61939900FD31DB /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		EF9B48391D61939900FD31DB /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		EF9B483A1D61939900FD31DB /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		EF9B483B1D61939900FD31DB /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		EF9B48461D619A9900FD31DB /* WYAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAccount.h; sourceTree = "<group>"; };
+		EF9B48471D619A9900FD31DB /* WYAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAccount.m; sourceTree = "<group>"; };
+		EF9B484B1D619FE900FD31DB /* WYAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYAccountTool.h; path = "OAuth(授权)/AccountTool/WYAccountTool.h"; sourceTree = "<group>"; };
+		EF9B484C1D619FE900FD31DB /* WYAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYAccountTool.m; path = "OAuth(授权)/AccountTool/WYAccountTool.m"; sourceTree = "<group>"; };
+		EF9B484E1D61DA6400FD31DB /* WYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYUser.h; path = Model/WYUser.h; sourceTree = "<group>"; };
+		EF9B484F1D61DA6400FD31DB /* WYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYUser.m; path = Model/WYUser.m; sourceTree = "<group>"; };
+		EF9B48511D61DA8100FD31DB /* WYStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYStatus.h; path = Model/WYStatus.h; sourceTree = "<group>"; };
+		EF9B48521D61DA8100FD31DB /* WYStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYStatus.m; path = Model/WYStatus.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF368A741D5E29E200206A96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF368A8D1D5E29E200206A96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF368A6E1D5E29E200206A96 = {
+			isa = PBXGroup;
+			children = (
+				EF368A791D5E29E200206A96 /* WYWeibo */,
+				EF368A931D5E29E200206A96 /* WYWeiboTests */,
+				EF368A781D5E29E200206A96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF368A781D5E29E200206A96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF368A771D5E29E200206A96 /* WYWeibo.app */,
+				EF368A901D5E29E200206A96 /* WYWeiboTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF368A791D5E29E200206A96 /* WYWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AA11D5E2A6800206A96 /* Classes */,
+				EF368A881D5E29E200206A96 /* LaunchScreen.storyboard */,
+				EF368A8B1D5E29E200206A96 /* Info.plist */,
+				EF368ACD1D5E2B2A00206A96 /* Assets.xcassets */,
+				EF368AC21D5E2A6800206A96 /* WYWeiboPrefixHeader.pch */,
+				EF368A7A1D5E29E200206A96 /* Supporting Files */,
+			);
+			path = WYWeibo;
+			sourceTree = "<group>";
+		};
+		EF368A7A1D5E29E200206A96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF368A7B1D5E29E200206A96 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF368A931D5E29E200206A96 /* WYWeiboTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF368A941D5E29E200206A96 /* WYWeiboTests.m */,
+				EF368A961D5E29E200206A96 /* Info.plist */,
+			);
+			path = WYWeiboTests;
+			sourceTree = "<group>";
+		};
+		EF368AA11D5E2A6800206A96 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B47E41D61592D00FD31DB /* OAuth(授权) */,
+				EF368ABA1D5E2A6800206A96 /* NewFeature(新特性) */,
+				EF368AAA1D5E2A6800206A96 /* Main(主要) */,
+				EF368AA61D5E2A6800206A96 /* Home(首页) */,
+				EF368AB61D5E2A6800206A96 /* MessageCenter(消息) */,
+				EF368AA21D5E2A6800206A96 /* Discover(广场) */,
+				EF368ABE1D5E2A6800206A96 /* Profile(我) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EF368AA21D5E2A6800206A96 /* Discover(广场) */ = {
+			isa = PBXGroup;
+			children = (
+				EF368ADC1D5E2D7E00206A96 /* View */,
+				EF368ADB1D5E2D7700206A96 /* Model */,
+				EF368AA31D5E2A6800206A96 /* Controller */,
+			);
+			name = "Discover(广场)";
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		EF368AA31D5E2A6800206A96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AA41D5E2A6800206A96 /* WYDiscoverViewController.h */,
+				EF368AA51D5E2A6800206A96 /* WYDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF368AA61D5E2A6800206A96 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AD81D5E2D5A00206A96 /* View */,
+				EF368AD71D5E2D5200206A96 /* Model */,
+				EF368AA71D5E2A6800206A96 /* Controller */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		EF368AA71D5E2A6800206A96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AA81D5E2A6800206A96 /* WYHomeViewController.h */,
+				EF368AA91D5E2A6800206A96 /* WYHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF368AAA1D5E2A6800206A96 /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B48491D619AB200FD31DB /* Model */,
+				EF368AD51D5E2CBC00206A96 /* Lib */,
+				EF368ACF1D5E2B7900206A96 /* Other */,
+				EF368AAB1D5E2A6800206A96 /* Category */,
+				EF368AAE1D5E2A6800206A96 /* Controller */,
+				EF368AB31D5E2A6800206A96 /* View */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		EF368AAB1D5E2A6800206A96 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AAC1D5E2A6800206A96 /* UIView+Extension.h */,
+				EF368AAD1D5E2A6800206A96 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		EF368AAE1D5E2A6800206A96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AAF1D5E2A6800206A96 /* WYNavigationController.h */,
+				EF368AB01D5E2A6800206A96 /* WYNavigationController.m */,
+				EF368AB11D5E2A6800206A96 /* WYTabBarController.h */,
+				EF368AB21D5E2A6800206A96 /* WYTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF368AB31D5E2A6800206A96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AB41D5E2A6800206A96 /* WYTabBar.h */,
+				EF368AB51D5E2A6800206A96 /* WYTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF368AB61D5E2A6800206A96 /* MessageCenter(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				EF368ADA1D5E2D6D00206A96 /* View */,
+				EF368AD91D5E2D6500206A96 /* Model */,
+				EF368AB71D5E2A6800206A96 /* Controller */,
+			);
+			path = "MessageCenter(消息)";
+			sourceTree = "<group>";
+		};
+		EF368AB71D5E2A6800206A96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AB81D5E2A6800206A96 /* WYMessageCenterViewController.h */,
+				EF368AB91D5E2A6800206A96 /* WYMessageCenterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF368ABA1D5E2A6800206A96 /* NewFeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				EF368ABB1D5E2A6800206A96 /* Controller */,
+			);
+			path = "NewFeature(新特性)";
+			sourceTree = "<group>";
+		};
+		EF368ABB1D5E2A6800206A96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF368ABC1D5E2A6800206A96 /* WYNewFeatureViewController.h */,
+				EF368ABD1D5E2A6800206A96 /* WYNewFeatureViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF368ABE1D5E2A6800206A96 /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AD41D5E2CAD00206A96 /* Model */,
+				EF368AD31D5E2C9A00206A96 /* View */,
+				EF368ABF1D5E2A6800206A96 /* Controller */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		EF368ABF1D5E2A6800206A96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AC01D5E2A6800206A96 /* WYProfileViewController.h */,
+				EF368AC11D5E2A6800206A96 /* WYProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF368ACF1D5E2B7900206A96 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EF368AD01D5E2C2C00206A96 /* AppDelegate.h */,
+				EF368AD11D5E2C2C00206A96 /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		EF368AD31D5E2C9A00206A96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EF368AD41D5E2CAD00206A96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF368AD51D5E2CBC00206A96 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B48281D61939900FD31DB /* AFNetworking */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		EF368AD71D5E2D5200206A96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B484E1D61DA6400FD31DB /* WYUser.h */,
+				EF9B484F1D61DA6400FD31DB /* WYUser.m */,
+				EF9B48511D61DA8100FD31DB /* WYStatus.h */,
+				EF9B48521D61DA8100FD31DB /* WYStatus.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF368AD81D5E2D5A00206A96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EF368AD91D5E2D6500206A96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF368ADA1D5E2D6D00206A96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EF368ADB1D5E2D7700206A96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF368ADC1D5E2D7E00206A96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EF9B47E41D61592D00FD31DB /* OAuth(授权) */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B484A1D619D3400FD31DB /* AccountTool */,
+				EF9B48451D619A9900FD31DB /* Model */,
+				EF9B47E51D61594300FD31DB /* Controller */,
+			);
+			name = "OAuth(授权)";
+			sourceTree = "<group>";
+		};
+		EF9B47E51D61594300FD31DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B47E61D6159A300FD31DB /* WYOAuthViewController.h */,
+				EF9B47E71D6159A300FD31DB /* WYOAuthViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EF9B48281D61939900FD31DB /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B48291D61939900FD31DB /* AFHTTPRequestOperation.h */,
+				EF9B482A1D61939900FD31DB /* AFHTTPRequestOperation.m */,
+				EF9B482B1D61939900FD31DB /* AFHTTPRequestOperationManager.h */,
+				EF9B482C1D61939900FD31DB /* AFHTTPRequestOperationManager.m */,
+				EF9B482D1D61939900FD31DB /* AFHTTPSessionManager.h */,
+				EF9B482E1D61939900FD31DB /* AFHTTPSessionManager.m */,
+				EF9B482F1D61939900FD31DB /* AFNetworking.h */,
+				EF9B48301D61939900FD31DB /* AFNetworkReachabilityManager.h */,
+				EF9B48311D61939900FD31DB /* AFNetworkReachabilityManager.m */,
+				EF9B48321D61939900FD31DB /* AFSecurityPolicy.h */,
+				EF9B48331D61939900FD31DB /* AFSecurityPolicy.m */,
+				EF9B48341D61939900FD31DB /* AFURLConnectionOperation.h */,
+				EF9B48351D61939900FD31DB /* AFURLConnectionOperation.m */,
+				EF9B48361D61939900FD31DB /* AFURLRequestSerialization.h */,
+				EF9B48371D61939900FD31DB /* AFURLRequestSerialization.m */,
+				EF9B48381D61939900FD31DB /* AFURLResponseSerialization.h */,
+				EF9B48391D61939900FD31DB /* AFURLResponseSerialization.m */,
+				EF9B483A1D61939900FD31DB /* AFURLSessionManager.h */,
+				EF9B483B1D61939900FD31DB /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			path = Lib/AFNetworking;
+			sourceTree = "<group>";
+		};
+		EF9B48451D619A9900FD31DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B48461D619A9900FD31DB /* WYAccount.h */,
+				EF9B48471D619A9900FD31DB /* WYAccount.m */,
+			);
+			name = Model;
+			path = "OAuth(授权)/Model";
+			sourceTree = "<group>";
+		};
+		EF9B48491D619AB200FD31DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF9B484A1D619D3400FD31DB /* AccountTool */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B484B1D619FE900FD31DB /* WYAccountTool.h */,
+				EF9B484C1D619FE900FD31DB /* WYAccountTool.m */,
+			);
+			name = AccountTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF368A761D5E29E200206A96 /* WYWeibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF368A991D5E29E200206A96 /* Build configuration list for PBXNativeTarget "WYWeibo" */;
+			buildPhases = (
+				EF368A731D5E29E200206A96 /* Sources */,
+				EF368A741D5E29E200206A96 /* Frameworks */,
+				EF368A751D5E29E200206A96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WYWeibo;
+			productName = WYWeibo;
+			productReference = EF368A771D5E29E200206A96 /* WYWeibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF368A8F1D5E29E200206A96 /* WYWeiboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF368A9C1D5E29E200206A96 /* Build configuration list for PBXNativeTarget "WYWeiboTests" */;
+			buildPhases = (
+				EF368A8C1D5E29E200206A96 /* Sources */,
+				EF368A8D1D5E29E200206A96 /* Frameworks */,
+				EF368A8E1D5E29E200206A96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF368A921D5E29E200206A96 /* PBXTargetDependency */,
+			);
+			name = WYWeiboTests;
+			productName = WYWeiboTests;
+			productReference = EF368A901D5E29E200206A96 /* WYWeiboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF368A6F1D5E29E200206A96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "闫合";
+				TargetAttributes = {
+					EF368A761D5E29E200206A96 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ASJRZUNWE7;
+					};
+					EF368A8F1D5E29E200206A96 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ASJRZUNWE7;
+						TestTargetID = EF368A761D5E29E200206A96;
+					};
+				};
+			};
+			buildConfigurationList = EF368A721D5E29E200206A96 /* Build configuration list for PBXProject "WYWeibo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF368A6E1D5E29E200206A96;
+			productRefGroup = EF368A781D5E29E200206A96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF368A761D5E29E200206A96 /* WYWeibo */,
+				EF368A8F1D5E29E200206A96 /* WYWeiboTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF368A751D5E29E200206A96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF368ACE1D5E2B2A00206A96 /* Assets.xcassets in Resources */,
+				EF368A8A1D5E29E200206A96 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF368A8E1D5E29E200206A96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF368A731D5E29E200206A96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF368AD21D5E2C2C00206A96 /* AppDelegate.m in Sources */,
+				EF368AC61D5E2A6800206A96 /* UIView+Extension.m in Sources */,
+				EF9B483D1D61939900FD31DB /* AFHTTPRequestOperationManager.m in Sources */,
+				EF368AC91D5E2A6800206A96 /* WYTabBar.m in Sources */,
+				EF9B48411D61939900FD31DB /* AFURLConnectionOperation.m in Sources */,
+				EF368AC51D5E2A6800206A96 /* WYHomeViewController.m in Sources */,
+				EF368ACA1D5E2A6800206A96 /* WYMessageCenterViewController.m in Sources */,
+				EF9B48421D61939900FD31DB /* AFURLRequestSerialization.m in Sources */,
+				EF368A7C1D5E29E200206A96 /* main.m in Sources */,
+				EF9B48531D61DA8100FD31DB /* WYStatus.m in Sources */,
+				EF9B483E1D61939900FD31DB /* AFHTTPSessionManager.m in Sources */,
+				EF9B48501D61DA6400FD31DB /* WYUser.m in Sources */,
+				EF9B483C1D61939900FD31DB /* AFHTTPRequestOperation.m in Sources */,
+				EF9B47E81D6159A300FD31DB /* WYOAuthViewController.m in Sources */,
+				EF9B48401D61939900FD31DB /* AFSecurityPolicy.m in Sources */,
+				EF9B48481D619A9900FD31DB /* WYAccount.m in Sources */,
+				EF9B483F1D61939900FD31DB /* AFNetworkReachabilityManager.m in Sources */,
+				EF9B48441D61939900FD31DB /* AFURLSessionManager.m in Sources */,
+				EF368ACC1D5E2A6800206A96 /* WYProfileViewController.m in Sources */,
+				EF9B484D1D619FE900FD31DB /* WYAccountTool.m in Sources */,
+				EF368AC41D5E2A6800206A96 /* WYDiscoverViewController.m in Sources */,
+				EF368AC71D5E2A6800206A96 /* WYNavigationController.m in Sources */,
+				EF368ACB1D5E2A6800206A96 /* WYNewFeatureViewController.m in Sources */,
+				EF9B48431D61939900FD31DB /* AFURLResponseSerialization.m in Sources */,
+				EF368AC81D5E2A6800206A96 /* WYTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF368A8C1D5E29E200206A96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF368A951D5E29E200206A96 /* WYWeiboTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF368A921D5E29E200206A96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF368A761D5E29E200206A96 /* WYWeibo */;
+			targetProxy = EF368A911D5E29E200206A96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF368A881D5E29E200206A96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF368A891D5E29E200206A96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF368A971D5E29E200206A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF368A981D5E29E200206A96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF368A9A1D5E29E200206A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WYWeibo/WYWeiboPrefixHeader.pch;
+				INFOPLIST_FILE = WYWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.WYWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF368A9B1D5E29E200206A96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WYWeibo/WYWeiboPrefixHeader.pch;
+				INFOPLIST_FILE = WYWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.WYWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF368A9D1D5E29E200206A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WYWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.WYWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYWeibo.app/WYWeibo";
+			};
+			name = Debug;
+		};
+		EF368A9E1D5E29E200206A96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WYWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yanhe.WYWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYWeibo.app/WYWeibo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF368A721D5E29E200206A96 /* Build configuration list for PBXProject "WYWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF368A971D5E29E200206A96 /* Debug */,
+				EF368A981D5E29E200206A96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF368A991D5E29E200206A96 /* Build configuration list for PBXNativeTarget "WYWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF368A9A1D5E29E200206A96 /* Debug */,
+				EF368A9B1D5E29E200206A96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF368A9C1D5E29E200206A96 /* Build configuration list for PBXNativeTarget "WYWeiboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF368A9D1D5E29E200206A96 /* Debug */,
+				EF368A9E1D5E29E200206A96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF368A6F1D5E29E200206A96 /* Project object */;
+}
