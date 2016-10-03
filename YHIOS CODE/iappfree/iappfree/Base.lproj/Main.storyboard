@@ -34,7 +34,7 @@
             <objects>
                 <navigationController title="限免" id="bOB-5j-pn5" customClass="YHNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="限免" image="tabbar_limitfree" id="9GY-gC-355"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="JG9-yO-PJd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="JG9-yO-PJd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -61,7 +61,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="limitFreeCell" id="xTI-eB-QUL">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xTI-eB-QUL" id="xKJ-yX-XjH">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -74,7 +74,7 @@
                             <outlet property="delegate" destination="vza-ug-TQT" id="4Dl-4a-pbr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="限免" id="5R6-YT-QV2">
+                    <navigationItem key="navigationItem" title="限 免" id="5R6-YT-QV2">
                         <barButtonItem key="leftBarButtonItem" style="done" id="2y7-pr-k43">
                             <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="VZn-LB-Yiz">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
@@ -135,7 +135,7 @@
                             <outlet property="delegate" destination="MZu-Sb-bbY" id="7GA-zH-IxY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="免费" id="0fK-1V-OBB"/>
+                    <navigationItem key="navigationItem" title="免 费" id="0fK-1V-OBB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xK9-3p-Knd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="-1435" y="49"/>
         </scene>
-        <!--热榜-->
+        <!--热 榜-->
         <scene sceneID="W8x-Gy-U1g">
             <objects>
                 <tableViewController id="hFB-2y-0Nw" sceneMemberID="viewController">
@@ -203,7 +203,7 @@
                             <outlet property="delegate" destination="hFB-2y-0Nw" id="6gQ-ws-Ny1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="热榜" id="v2H-Hz-fjo"/>
+                    <navigationItem key="navigationItem" title="热 榜" id="v2H-Hz-fjo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CH4-iE-zWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,7 +226,7 @@
             </objects>
             <point key="canvasLocation" x="289" y="-1692"/>
         </scene>
-        <!--降价-->
+        <!--降 价-->
         <scene sceneID="Lmm-kM-E3N">
             <objects>
                 <tableViewController id="hBC-fW-lDv" sceneMemberID="viewController">
@@ -255,7 +255,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="降价" id="UhS-9T-LeV"/>
+                    <navigationItem key="navigationItem" title="降 价" id="UhS-9T-LeV"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b15-vY-4t7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,7 +279,7 @@
             </objects>
             <point key="canvasLocation" x="-648" y="-13"/>
         </scene>
-        <!--专题-->
+        <!--专 题-->
         <scene sceneID="lLG-c8-mEg">
             <objects>
                 <tableViewController id="bEP-G7-ePN" sceneMemberID="viewController">
@@ -307,7 +307,7 @@
                             <outlet property="delegate" destination="bEP-G7-ePN" id="29M-Ss-ODq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="专题" id="EnQ-bM-xbn"/>
+                    <navigationItem key="navigationItem" title="专 题" id="EnQ-bM-xbn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj2-dH-hsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
