@@ -17,7 +17,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-       
+    
     }
     return self;
 }
@@ -29,8 +29,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    UIImage *image = [UIImage imageNamed:@"tabbar_limitfree_press"];
-//    
+//
 //    self.tabBarItem.selectedImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 - (IBAction)endSearch:(id)sender {
