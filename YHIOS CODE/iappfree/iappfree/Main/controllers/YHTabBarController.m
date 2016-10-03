@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    for (UIBarItem *item in self.tabBar.items) {
+        [item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                      [UIFont fontWithName:@"Helvetica" size:13.0], NSFontAttributeName, nil]
+                            forState:UIControlStateNormal];
+        
+    }
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
