@@ -18,7 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbar.png"] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:22],NSForegroundColorAttributeName:[UIColor colorWithRed:0.4 green:0.66 blue:1.0 alpha:1]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:22],NSForegroundColorAttributeName:[UIColor colorWithRed:0.395 green:0.650 blue:0.987 alpha:1.000]}];
+    [[UINavigationBar appearance] setTranslucent:NO];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,12 +10,12 @@
         <scene sceneID="Zda-2F-SCy">
             <objects>
                 <tabBarController title="主入口" id="9cU-WM-cMQ" customClass="YHTabBarController" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" backgroundImage="tabbar_bg" id="jqa-Wp-4P0">
+                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="tabbar_bg" id="jqa-Wp-4P0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="bOB-5j-pn5" kind="relationship" relationship="viewControllers" id="WSf-ns-00g"/>
@@ -33,7 +33,7 @@
         <scene sceneID="by4-zi-Fto">
             <objects>
                 <navigationController title="限免" id="bOB-5j-pn5" customClass="YHNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="限免" image="tabbar_limitfree" id="9GY-gC-355"/>
+                    <tabBarItem key="tabBarItem" title="限免" image="tabbar_limitfree" selectedImage="tabbar_limitfree_press" id="9GY-gC-355"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="JG9-yO-PJd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -49,9 +49,9 @@
         <!--限免-->
         <scene sceneID="dfB-5d-5hh">
             <objects>
-                <tableViewController title="限免" id="vza-ug-TQT" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                <tableViewController title="限免" id="vza-ug-TQT" customClass="LimitFreeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="130" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="60万款应用搜搜看" id="uwy-eV-pqN">
@@ -60,18 +60,25 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="limitFreeCell" id="xTI-eB-QUL">
-                                <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="limitFreeCell" rowHeight="130" id="xTI-eB-QUL">
+                                <rect key="frame" x="0.0" y="100" width="375" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xTI-eB-QUL" id="xKJ-yX-XjH">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fc-7e-kWw">
+                                            <frame key="frameInset" minX="20" minY="8" width="82" height="78"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="vza-ug-TQT" id="C6w-sH-mJa"/>
                             <outlet property="delegate" destination="vza-ug-TQT" id="4Dl-4a-pbr"/>
+                            <outletCollection property="gestureRecognizers" destination="Q7r-sB-ewY" appends="YES" id="rSh-2o-3U6"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="限 免" id="5R6-YT-QV2">
@@ -104,15 +111,20 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeY-FS-EKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Q7r-sB-ewY">
+                    <connections>
+                        <action selector="endSearch:" destination="vza-ug-TQT" id="VKB-LN-2GQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1207" y="-882"/>
+            <point key="canvasLocation" x="1205.5999999999999" y="-882.00899550224892"/>
         </scene>
         <!--免费-->
         <scene sceneID="qOP-EA-O8P">
             <objects>
-                <tableViewController title="免费" id="MZu-Sb-bbY" sceneMemberID="viewController">
+                <tableViewController title="免费" id="MZu-Sb-bbY" customClass="FreeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="SDr-HZ-OhB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="60万款应用搜搜看" id="m3K-rf-LJk">
@@ -122,10 +134,10 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="freeCell" id="qgF-MC-dvF">
-                                <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgF-MC-dvF" id="gyC-V1-3Qp">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -133,11 +145,44 @@
                         <connections>
                             <outlet property="dataSource" destination="MZu-Sb-bbY" id="lci-dA-JSA"/>
                             <outlet property="delegate" destination="MZu-Sb-bbY" id="7GA-zH-IxY"/>
+                            <outletCollection property="gestureRecognizers" destination="kiO-cJ-4kh" appends="YES" id="hy1-NO-afw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="免 费" id="0fK-1V-OBB"/>
+                    <navigationItem key="navigationItem" title="免 费" id="0fK-1V-OBB">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="1vb-5C-oAm">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="T6z-Bm-pXx">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="buttonbar_action">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="分类">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="设置" style="done" id="XqY-Vy-QAK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xDm-Yt-tKa">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="设置" backgroundImage="buttonbar_action">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xK9-3p-Knd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kiO-cJ-4kh">
+                    <connections>
+                        <action selector="endSearch:" destination="MZu-Sb-bbY" id="0yf-yv-jMF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1257" y="-13"/>
         </scene>
@@ -145,7 +190,7 @@
         <scene sceneID="WCy-XR-W8c">
             <objects>
                 <navigationController title="免费" id="4s9-L0-rZ5" customClass="YHNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="免费" image="tabbar_appfree" id="8av-Bg-ag1"/>
+                    <tabBarItem key="tabBarItem" title="免费" image="tabbar_appfree" selectedImage="tabbar_appfree_press" id="8av-Bg-ag1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wSP-Hb-APK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -162,7 +207,7 @@
         <scene sceneID="pei-Ti-F6A">
             <objects>
                 <navigationController title="热榜" id="T6G-Wh-azE" customClass="YHNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="热榜" image="tabbar_rank" id="gOa-rH-HcH"/>
+                    <tabBarItem key="tabBarItem" title="热榜" image="tabbar_rank" selectedImage="tabbar_rank_press" id="gOa-rH-HcH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fEe-25-lXl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -178,9 +223,9 @@
         <!--热 榜-->
         <scene sceneID="W8x-Gy-U1g">
             <objects>
-                <tableViewController id="hFB-2y-0Nw" sceneMemberID="viewController">
+                <tableViewController id="hFB-2y-0Nw" customClass="RankTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="OFu-of-cj4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="60万款应用搜搜看" id="cRP-MD-hWV">
@@ -190,10 +235,10 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rankCell" id="3Dd-50-jtH">
-                                <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Dd-50-jtH" id="juP-WU-lP9">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -201,11 +246,44 @@
                         <connections>
                             <outlet property="dataSource" destination="hFB-2y-0Nw" id="1dk-uH-LQ7"/>
                             <outlet property="delegate" destination="hFB-2y-0Nw" id="6gQ-ws-Ny1"/>
+                            <outletCollection property="gestureRecognizers" destination="jDG-yU-q4S" appends="YES" id="Uns-pf-4Gh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="热 榜" id="v2H-Hz-fjo"/>
+                    <navigationItem key="navigationItem" title="热 榜" id="v2H-Hz-fjo">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="Bvd-Cm-OA4">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="C0d-Kc-ZXA">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="buttonbar_action">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="分类">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="nGk-cp-HN0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aqE-oe-Gch">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="设置" backgroundImage="buttonbar_action">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CH4-iE-zWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jDG-yU-q4S">
+                    <connections>
+                        <action selector="endSearch:" destination="hFB-2y-0Nw" id="fCT-zH-rda"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1436" y="911"/>
         </scene>
@@ -213,7 +291,7 @@
         <scene sceneID="j9Y-m6-VHl">
             <objects>
                 <navigationController title="降价" id="Vhz-0T-ZgN" customClass="YHNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="降价" image="tabbar_reduceprice" id="O5f-Se-xjf"/>
+                    <tabBarItem key="tabBarItem" title="降价" image="tabbar_reduceprice" selectedImage="tabbar_reduceprice_press" id="O5f-Se-xjf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CcI-Rk-BDd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -229,8 +307,8 @@
         <!--降 价-->
         <scene sceneID="Lmm-kM-E3N">
             <objects>
-                <tableViewController id="hBC-fW-lDv" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="KlL-CK-uyX">
+                <tableViewController id="hBC-fW-lDv" customClass="ReducePriceTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" id="KlL-CK-uyX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -240,11 +318,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reducePriceCell" id="ely-tg-olA">
-                                <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reducePriceCell" rowHeight="90" id="ely-tg-olA">
+                                <rect key="frame" x="0.0" y="164" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ely-tg-olA" id="Afb-Jd-kFv">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -252,21 +330,54 @@
                         <connections>
                             <outlet property="dataSource" destination="hBC-fW-lDv" id="1rZ-vo-rYd"/>
                             <outlet property="delegate" destination="hBC-fW-lDv" id="xPd-8J-JQV"/>
+                            <outletCollection property="gestureRecognizers" destination="Ei3-zr-QaJ" appends="YES" id="jrY-fc-P4G"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="降 价" id="UhS-9T-LeV"/>
+                    <navigationItem key="navigationItem" title="降 价" id="UhS-9T-LeV">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="7MX-VH-Hpt">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="IH2-zW-GU8">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="buttonbar_action">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="分类">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="设置" style="done" id="rhB-3t-Ou4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e83-fG-yPc">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="设置" backgroundImage="buttonbar_action">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b15-vY-4t7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ei3-zr-QaJ">
+                    <connections>
+                        <action selector="endSearch:" destination="hBC-fW-lDv" id="wCd-Ql-fSa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1257" y="-1693"/>
+            <point key="canvasLocation" x="1256.8" y="-1693.4032983508248"/>
         </scene>
         <!--专题-->
         <scene sceneID="zHD-pM-I6w">
             <objects>
                 <navigationController title="专题" id="ufS-Dx-hKJ" customClass="YHNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="专题" image="tabbar_subject" id="hTT-ZN-MEx"/>
+                    <tabBarItem key="tabBarItem" title="专题" image="tabbar_subject" selectedImage="tabbar_subject_press" id="hTT-ZN-MEx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ohn-56-cfI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -282,9 +393,9 @@
         <!--专 题-->
         <scene sceneID="lLG-c8-mEg">
             <objects>
-                <tableViewController id="bEP-G7-ePN" sceneMemberID="viewController">
+                <tableViewController id="bEP-G7-ePN" customClass="SubjectTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="inl-lh-O2P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="60万款应用搜搜看" id="eej-AN-C8B">
@@ -294,10 +405,10 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subjectCell" id="Vh7-fN-3Ki">
-                                <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vh7-fN-3Ki" id="tUY-kX-BJB">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -305,11 +416,17 @@
                         <connections>
                             <outlet property="dataSource" destination="bEP-G7-ePN" id="C1W-my-EsD"/>
                             <outlet property="delegate" destination="bEP-G7-ePN" id="29M-Ss-ODq"/>
+                            <outletCollection property="gestureRecognizers" destination="b7c-F4-c1a" appends="YES" id="ZDC-UD-fj6"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="专 题" id="EnQ-bM-xbn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj2-dH-hsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="b7c-F4-c1a">
+                    <connections>
+                        <action selector="endSearch:" destination="bEP-G7-ePN" id="Jnl-J2-2MG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-647" y="911"/>
         </scene>
@@ -317,10 +434,15 @@
     <resources>
         <image name="buttonbar_action" width="10" height="30"/>
         <image name="tabbar_appfree" width="40" height="40"/>
+        <image name="tabbar_appfree_press" width="40" height="40"/>
         <image name="tabbar_bg" width="320" height="49"/>
         <image name="tabbar_limitfree" width="40" height="40"/>
+        <image name="tabbar_limitfree_press" width="40" height="40"/>
         <image name="tabbar_rank" width="40" height="40"/>
+        <image name="tabbar_rank_press" width="40" height="40"/>
         <image name="tabbar_reduceprice" width="40" height="40"/>
+        <image name="tabbar_reduceprice_press" width="40" height="40"/>
         <image name="tabbar_subject" width="40" height="40"/>
+        <image name="tabbar_subject_press" width="40" height="40"/>
     </resources>
 </document>
