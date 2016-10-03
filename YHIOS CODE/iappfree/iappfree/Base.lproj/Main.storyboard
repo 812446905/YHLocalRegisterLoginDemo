@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,7 +51,7 @@
         <scene sceneID="dfB-5d-5hh">
             <objects>
                 <tableViewController title="限免" id="vza-ug-TQT" customClass="LimitFreeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="130" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="178" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -60,19 +61,36 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="limitFreeCell" rowHeight="130" id="xTI-eB-QUL">
-                                <rect key="frame" x="0.0" y="100" width="375" height="130"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="limitFreeCell" editingAccessoryType="disclosureIndicator" rowHeight="178" id="xTI-eB-QUL" customClass="YHTableViewCell">
+                                <rect key="frame" x="0.0" y="100" width="375" height="178"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xTI-eB-QUL" id="xKJ-yX-XjH">
-                                    <frame key="frameInset" width="375" height="129"/>
+                                    <frame key="frameInset" width="342" height="177"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fc-7e-kWw">
-                                            <frame key="frameInset" minX="20" minY="8" width="82" height="78"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_Weather" translatesAutoresizingMaskIntoConstraints="NO" id="4Fc-7e-kWw"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享：5次   收藏：100次  下载：255次  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kni-ki-DsJ">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="aHz-zD-mn5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4Fc-7e-kWw" firstAttribute="leading" secondItem="kni-ki-DsJ" secondAttribute="leading" id="aER-5c-dQX"/>
+                                        <constraint firstItem="kni-ki-DsJ" firstAttribute="bottom" secondItem="xKJ-yX-XjH" secondAttribute="bottomMargin" id="g7G-Oc-Eha"/>
+                                        <constraint firstItem="4Fc-7e-kWw" firstAttribute="leading" secondItem="xKJ-yX-XjH" secondAttribute="leadingMargin" constant="12" id="lCu-rC-ynT"/>
+                                        <constraint firstItem="kni-ki-DsJ" firstAttribute="top" secondItem="4Fc-7e-kWw" secondAttribute="bottom" constant="18" id="mrR-5m-F1m"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kni-ki-DsJ" secondAttribute="trailing" constant="39" id="wkx-sh-Yz3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="IMGView" destination="4Fc-7e-kWw" id="YnT-PN-cQP"/>
+                                    <outlet property="imageView" destination="4Fc-7e-kWw" id="W33-t5-kvh"/>
+                                    <outlet property="shareSaveDownloadLabel" destination="kni-ki-DsJ" id="zja-UH-aP5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgF-MC-dvF" id="gyC-V1-3Qp">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -238,7 +256,7 @@
                                 <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Dd-50-jtH" id="juP-WU-lP9">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -319,7 +337,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reducePriceCell" rowHeight="90" id="ely-tg-olA">
-                                <rect key="frame" x="0.0" y="164" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="163.5" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ely-tg-olA" id="Afb-Jd-kFv">
                                     <frame key="frameInset" width="375" height="89"/>
@@ -408,7 +426,7 @@
                                 <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vh7-fN-3Ki" id="tUY-kX-BJB">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -433,6 +451,7 @@
     </scenes>
     <resources>
         <image name="buttonbar_action" width="10" height="30"/>
+        <image name="category_Weather" width="120" height="120"/>
         <image name="tabbar_appfree" width="40" height="40"/>
         <image name="tabbar_appfree_press" width="40" height="40"/>
         <image name="tabbar_bg" width="320" height="49"/>

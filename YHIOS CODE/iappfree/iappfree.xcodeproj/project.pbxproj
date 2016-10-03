@@ -17,6 +17,7 @@
 		EF41181F1DA21EF800A3C143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF41181D1DA21EF800A3C143 /* Main.storyboard */; };
 		EF4118211DA21EF800A3C143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4118201DA21EF800A3C143 /* Assets.xcassets */; };
 		EF4118241DA21EF800A3C143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4118221DA21EF800A3C143 /* LaunchScreen.storyboard */; };
+		EF7409D91DA2FC5F00A20C6F /* YHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7409D81DA2FC5F00A20C6F /* YHTableViewCell.m */; };
 		EFA2200A1DA224180072EEC0 /* YHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA220081DA224180072EEC0 /* YHTabBarController.m */; };
 		EFA2200E1DA225EE0072EEC0 /* YHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA2200D1DA225EE0072EEC0 /* YHNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,8 @@
 		EF4118201DA21EF800A3C143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF4118231DA21EF800A3C143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF4118251DA21EF800A3C143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7409D71DA2FC5F00A20C6F /* YHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHTableViewCell.h; path = Main/views/YHTableViewCell.h; sourceTree = "<group>"; };
+		EF7409D81DA2FC5F00A20C6F /* YHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHTableViewCell.m; path = Main/views/YHTableViewCell.m; sourceTree = "<group>"; };
 		EFA220071DA224180072EEC0 /* YHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHTabBarController.h; path = Main/controllers/YHTabBarController.h; sourceTree = "<group>"; };
 		EFA220081DA224180072EEC0 /* YHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHTabBarController.m; path = Main/controllers/YHTabBarController.m; sourceTree = "<group>"; };
 		EFA2200C1DA225EE0072EEC0 /* YHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHNavigationController.h; path = Main/controllers/YHNavigationController.h; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 		EF41182B1DA2218C00A3C143 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EF7409D61DA2FC2B00A20C6F /* views */,
 				EF41182C1DA2219B00A3C143 /* controllers */,
 			);
 			name = Main;
@@ -170,6 +174,15 @@
 				EF0D613D1DA2C98D007486F5 /* controllers */,
 			);
 			name = "限免";
+			sourceTree = "<group>";
+		};
+		EF7409D61DA2FC2B00A20C6F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				EF7409D71DA2FC5F00A20C6F /* YHTableViewCell.h */,
+				EF7409D81DA2FC5F00A20C6F /* YHTableViewCell.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		EFA220021DA222FE0072EEC0 /* 降价 */ = {
@@ -285,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7409D91DA2FC5F00A20C6F /* YHTableViewCell.m in Sources */,
 				EF0D61501DA2CF83007486F5 /* RankTableViewController.m in Sources */,
 				EFA2200E1DA225EE0072EEC0 /* YHNavigationController.m in Sources */,
 				EFA2200A1DA224180072EEC0 /* YHTabBarController.m in Sources */,
