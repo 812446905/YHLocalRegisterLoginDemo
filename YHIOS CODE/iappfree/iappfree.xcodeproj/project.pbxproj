@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		EF4118161DA21EF800A3C143 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4118151DA21EF800A3C143 /* main.m */; };
 		EF4118191DA21EF800A3C143 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4118181DA21EF800A3C143 /* AppDelegate.m */; };
-		EF41181C1DA21EF800A3C143 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF41181B1DA21EF800A3C143 /* ViewController.m */; };
 		EF41181F1DA21EF800A3C143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF41181D1DA21EF800A3C143 /* Main.storyboard */; };
 		EF4118211DA21EF800A3C143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4118201DA21EF800A3C143 /* Assets.xcassets */; };
 		EF4118241DA21EF800A3C143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4118221DA21EF800A3C143 /* LaunchScreen.storyboard */; };
+		EFA2200A1DA224180072EEC0 /* YHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA220081DA224180072EEC0 /* YHTabBarController.m */; };
+		EFA2200E1DA225EE0072EEC0 /* YHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA2200D1DA225EE0072EEC0 /* YHNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		EF4118151DA21EF800A3C143 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF4118171DA21EF800A3C143 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF4118181DA21EF800A3C143 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF41181A1DA21EF800A3C143 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF41181B1DA21EF800A3C143 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EF41181E1DA21EF800A3C143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF4118201DA21EF800A3C143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF4118231DA21EF800A3C143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF4118251DA21EF800A3C143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA220071DA224180072EEC0 /* YHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHTabBarController.h; path = Main/controllers/YHTabBarController.h; sourceTree = "<group>"; };
+		EFA220081DA224180072EEC0 /* YHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHTabBarController.m; path = Main/controllers/YHTabBarController.m; sourceTree = "<group>"; };
+		EFA2200C1DA225EE0072EEC0 /* YHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHNavigationController.h; path = Main/controllers/YHNavigationController.h; sourceTree = "<group>"; };
+		EFA2200D1DA225EE0072EEC0 /* YHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHNavigationController.m; path = Main/controllers/YHNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,13 @@
 		EF4118131DA21EF800A3C143 /* iappfree */ = {
 			isa = PBXGroup;
 			children = (
+				EFA220061DA223280072EEC0 /* other */,
+				EFA220051DA2231B0072EEC0 /* 热榜 */,
+				EFA220041DA223130072EEC0 /* 专题 */,
+				EFA220031DA2230B0072EEC0 /* 免费 */,
+				EFA220021DA222FE0072EEC0 /* 降价 */,
+				EF41182E1DA2228C00A3C143 /* 限免 */,
 				EF41182B1DA2218C00A3C143 /* Main */,
-				EF4118171DA21EF800A3C143 /* AppDelegate.h */,
-				EF4118181DA21EF800A3C143 /* AppDelegate.m */,
-				EF41181A1DA21EF800A3C143 /* ViewController.h */,
-				EF41181B1DA21EF800A3C143 /* ViewController.m */,
 				EF41181D1DA21EF800A3C143 /* Main.storyboard */,
 				EF4118201DA21EF800A3C143 /* Assets.xcassets */,
 				EF4118221DA21EF800A3C143 /* LaunchScreen.storyboard */,
@@ -83,7 +88,6 @@
 		EF41182B1DA2218C00A3C143 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EF41182E1DA2228C00A3C143 /* 限免 */,
 				EF41182C1DA2219B00A3C143 /* controllers */,
 			);
 			name = Main;
@@ -92,6 +96,10 @@
 		EF41182C1DA2219B00A3C143 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFA220071DA224180072EEC0 /* YHTabBarController.h */,
+				EFA220081DA224180072EEC0 /* YHTabBarController.m */,
+				EFA2200C1DA225EE0072EEC0 /* YHNavigationController.h */,
+				EFA2200D1DA225EE0072EEC0 /* YHNavigationController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -101,6 +109,43 @@
 			children = (
 			);
 			name = "限免";
+			sourceTree = "<group>";
+		};
+		EFA220021DA222FE0072EEC0 /* 降价 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "降价";
+			sourceTree = "<group>";
+		};
+		EFA220031DA2230B0072EEC0 /* 免费 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "免费";
+			sourceTree = "<group>";
+		};
+		EFA220041DA223130072EEC0 /* 专题 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "专题";
+			sourceTree = "<group>";
+		};
+		EFA220051DA2231B0072EEC0 /* 热榜 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "热榜";
+			sourceTree = "<group>";
+		};
+		EFA220061DA223280072EEC0 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				EF4118171DA21EF800A3C143 /* AppDelegate.h */,
+				EF4118181DA21EF800A3C143 /* AppDelegate.m */,
+			);
+			name = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF41181C1DA21EF800A3C143 /* ViewController.m in Sources */,
+				EFA2200E1DA225EE0072EEC0 /* YHNavigationController.m in Sources */,
+				EFA2200A1DA224180072EEC0 /* YHTabBarController.m in Sources */,
 				EF4118191DA21EF800A3C143 /* AppDelegate.m in Sources */,
 				EF4118161DA21EF800A3C143 /* main.m in Sources */,
 			);
@@ -336,6 +382,7 @@
 				EF41182A1DA21EF800A3C143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

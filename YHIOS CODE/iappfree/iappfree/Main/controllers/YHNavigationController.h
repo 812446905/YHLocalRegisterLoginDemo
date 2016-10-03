@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YHNavigationController.h
 //  iappfree
 //
 //  Created by 闫合 on 2016/10/3.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface YHNavigationController : UINavigationController
 
 @end
-
