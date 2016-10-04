@@ -27,13 +27,20 @@
    BOOL b = [_db open];
     if (!b) {
         //创建一个警报
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"打开数据库失败，应用将终止！" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"友情 提示" message:@"打开数据库失败，应用将终止！" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil]];
         [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
         return NO;
     }
     //创建表
-    
+    b = [_db executeUpdate:@"create table if not exists apps(appId integer,appName text,appDescription text,appCategory text,icon blob,originalPrice integer,limitedFree text,starLevel integer,expireDate text,downloadCount integer,shareCount integer,favoriteCount integer,fileSize integer)"];
+    if (!b) {
+        //创建一个警报
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"创建数据表失败，应用将终止！" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil]];
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        return NO;
+    }
     return YES;
 }
 
