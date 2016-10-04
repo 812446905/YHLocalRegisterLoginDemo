@@ -17,6 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [paths firstObject];
+    path = [path stringByAppendingPathComponent:@"YHApps.db"];
+    NSLog(@"%@",path);
+    //创建数据库
+    _db = [FMDatabase databaseWithPath:path];
+    //打开数据库
+   BOOL b = [_db open];
+    if (!b) {
+        //创建一个警报
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"打开数据库失败，应用将终止！" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil]];
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        return NO;
+    }
+    //创建表
+    
     return YES;
 }
 
