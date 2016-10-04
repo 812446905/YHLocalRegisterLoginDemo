@@ -13,8 +13,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-//        self.backgroundView = (UIView *)[UIImage imageNamed:@"topic_Cell_Bg.png"];
     }
     return self;
 }
