@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YHTableViewCell.h"
-#import "Reachability.h"
+#import "AppDelegate.h"
 @interface LimitFreeTableViewController : UITableViewController
+
 @end

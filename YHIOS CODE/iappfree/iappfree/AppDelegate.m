@@ -18,12 +18,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    self.reach = [Reachability reachabilityWithHostName:@"http://www.baidu.com"];
-    [self updateInterfaceWithReachability:self.reach];
+    self.reach = [Reachability reachabilityWithHostName:@"www.sohu.com"];
+    [self.reach startNotifier];
     self.status = [self.reach currentReachabilityStatus];
-    self.internetReach = [Reachability reachabilityForInternetConnection];
-    [self updateInterfaceWithReachability:self.internetReach];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *path = [paths firstObject];
     path = [path stringByAppendingPathComponent:@"YHApps.db"];
     NSLog(@"%@",path);
@@ -33,7 +31,7 @@
    BOOL b = [_db open];
     if (!b) {
         //创建一个警报
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"友情 提示" message:@"打开数据库失败，应用将终止！" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"打开数据库失败，应用将终止！" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil]];
         [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
         return NO;
@@ -50,45 +48,17 @@
     return YES;
 }
 
--(void)reachabilityChanged:(NSNotification *)note
+-(void)reachabilityChanged:(id)notification
 {
-    Reachability *curReach = [note object];
-    [self updateInterfaceWithReachability:curReach];
-    NSLog(@)
-}
-- (void)updateInterfaceWithReachability:(Reachability *)reachability
-{
-    self.status = [reachability currentReachabilityStatus];
-    NSString* statusString = @"";
-    
-    switch (self.status)
+    self.reach = [notification object];
+    NetworkStatus curStatus = [self.reach currentReachabilityStatus];
+    if (curStatus==NotReachable)
     {
-        case NotReachable:        {
-            statusString = @"无法连接到网络，请检查网络设置！";
-            //创建一个警报
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
-            [alert show];
-            
-            break;
-        }
-            
-        case ReachableViaWWAN:        {
-            statusString = @"您当前正在使用蜂窝数据！";
-            //创建一个警报
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
-            [alert show];
-            break;
-        }
-        case ReachableViaWiFi:        {
-            statusString= @"已连接到WiFi网络！";
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
-            [alert show];
-            break;
-        }
+        NSString *statusString = @"目前没有网络，请检查网络设置！";
+        UIAlertView *alert1 = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+        [alert1 show];
     }
 }
-
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];

@@ -33,6 +33,41 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 //
 //    self.tabBarItem.selectedImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //检查网络设置
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication];
+    NetworkStatus netStatus = appDelegate.status;
+    NSLog(@"%ld",(long)netStatus);
+    //判断网络状态
+    if (netStatus==NotReachable)
+    {
+        //从本地加载数据
+        [self loadLocalData];
+    }
+    else
+    {
+        //有网络，从远端加载数据
+        [self loadRemoteData];
+    }
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+
+}
+
+/**
+ 加载本地数据
+ */
+-(void)loadLocalData
+{
+
+}
+/**
+ 加载远端数据
+ */
+-(void)loadRemoteData
+{
+    
 }
 - (IBAction)endSearch:(id)sender {
     [self.tableView endEditing:YES];

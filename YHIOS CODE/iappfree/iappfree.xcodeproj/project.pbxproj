@@ -20,6 +20,8 @@
 		EF4C6CD41DA40A90002910F1 /* YHApps.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C6CD31DA40A90002910F1 /* YHApps.m */; };
 		EF4C6CD71DA4B22E002910F1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C6CD61DA4B22E002910F1 /* Reachability.m */; };
 		EF7409D91DA2FC5F00A20C6F /* YHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7409D81DA2FC5F00A20C6F /* YHTableViewCell.m */; };
+		EF92B3841DA4D50B0024BA01 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF92B3831DA4D50B0024BA01 /* SystemConfiguration.framework */; };
+		EF92B3861DA4D5690024BA01 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF92B3851DA4D5690024BA01 /* CFNetwork.framework */; };
 		EFA2200A1DA224180072EEC0 /* YHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA220081DA224180072EEC0 /* YHTabBarController.m */; };
 		EFA2200E1DA225EE0072EEC0 /* YHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA2200D1DA225EE0072EEC0 /* YHNavigationController.m */; };
 		EFE562B11DA3E72A00786BD2 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE562A61DA3E72A00786BD2 /* FMDatabase.m */; };
@@ -56,6 +58,8 @@
 		EF4C6CD61DA4B22E002910F1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		EF7409D71DA2FC5F00A20C6F /* YHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHTableViewCell.h; path = Main/views/YHTableViewCell.h; sourceTree = "<group>"; };
 		EF7409D81DA2FC5F00A20C6F /* YHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHTableViewCell.m; path = Main/views/YHTableViewCell.m; sourceTree = "<group>"; };
+		EF92B3831DA4D50B0024BA01 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EF92B3851DA4D5690024BA01 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EFA220071DA224180072EEC0 /* YHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHTabBarController.h; path = Main/controllers/YHTabBarController.h; sourceTree = "<group>"; };
 		EFA220081DA224180072EEC0 /* YHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHTabBarController.m; path = Main/controllers/YHTabBarController.m; sourceTree = "<group>"; };
 		EFA2200C1DA225EE0072EEC0 /* YHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHNavigationController.h; path = Main/controllers/YHNavigationController.h; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF92B3861DA4D5690024BA01 /* CFNetwork.framework in Frameworks */,
+				EF92B3841DA4D50B0024BA01 /* SystemConfiguration.framework in Frameworks */,
 				EFE562B91DA3E79800786BD2 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +285,8 @@
 		EFE562B71DA3E79800786BD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF92B3851DA4D5690024BA01 /* CFNetwork.framework */,
+				EF92B3831DA4D50B0024BA01 /* SystemConfiguration.framework */,
 				EFE562B81DA3E79800786BD2 /* libsqlite3.0.tbd */,
 			);
 			name = Frameworks;

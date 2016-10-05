@@ -34,7 +34,6 @@
         btn.backgroundColor = [UIColor clearColor];
         [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     }
-    //sender.backgroundColor = [UIColor orangeColor];
     sender.titleLabel.font = [UIFont systemFontOfSize:20];
     [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     NSInteger flid = sender.tag;
