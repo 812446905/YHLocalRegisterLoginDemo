@@ -26,6 +26,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "SVProgressHUD.h"
 
 typedef enum{
 	EGOOPullRefreshPulling = 0,

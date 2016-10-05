@@ -162,7 +162,6 @@
 			
 			break;
 		case EGOOPullRefreshLoading:
-			
 			_statusLabel.text = NSLocalizedString(@"玩命儿加载中...", @"Loading Status");
 			[_activityView startAnimating];
 			[CATransaction begin];
@@ -237,7 +236,7 @@
 - (void)egoRefreshScrollViewDataSourceDidFinishedLoading:(UIScrollView *)scrollView {	
 	
 	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:.3];
+	[UIView setAnimationDuration:0.2];
 	[scrollView setContentInset:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
 	[UIView commitAnimations];
 	

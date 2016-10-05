@@ -10,7 +10,8 @@
 
 @interface LimitFreeTableViewController ()
 {
-    NSMutableArray *apps;
+    //应用列表
+    NSMutableArray *appList;
 }
 @end
 
@@ -19,7 +20,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-    
+        
+
     }
     return self;
 }
@@ -37,19 +39,24 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NetworkStatus netStatus = appDelegate.status;
     NSLog(@"%ld",(long)netStatus);
+    [SVProgressHUD showWithStatus:@"加载中..."];
+    [self SVProgressHUDShowSetting];
     //判断网络状态
     if (netStatus==NotReachable)
     {
         NSLog(@"客官，咋整的，没有联网，数据将从本地加载！");
         //从本地加载数据
         [self loadLocalData];
+       
     }
     else
     {
         NSLog(@"哎呀，妈呀，网络杠杠的，将为你从远端获取数据！");
         //有网络，从远端加载数据
         [self loadRemoteData];
+       
     }
+    [SVProgressHUD dismissWithDelay:1];
     //创建下拉刷新控件
     if (_refreshHeaderView == nil) {
         
@@ -61,8 +68,37 @@
     }
     //  update the last update date
     [_refreshHeaderView refreshLastUpdatedDate];
-    //增加上拉加载控件
     
+    //增加上拉加载控件
+    [self.tableView addFooterWithTarget:self action:@selector(loadTap)];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+   
+}
+#pragma mark - 加载数据
+/**
+ 加载本地数据
+ */
+-(void)loadLocalData
+{
+    
+
+}
+/**
+ 加载远端数据
+ */
+-(void)loadRemoteData
+{
+    
+
+}
+
+-(void)loadTap
+{
+    [self.tableView reloadData];
+   
+    [self.tableView footerEndRefreshing];
 }
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
@@ -71,16 +107,23 @@
     
     //  should be calling your tableviews data source model to reload
     //  put here just for demo
+    [SVProgressHUD showWithStatus:@"加载中..."];
+    [self SVProgressHUDShowSetting];
     _reloading = YES;
     
 }
-
+-(void)SVProgressHUDShowSetting
+{
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+}
 - (void)doneLoadingTableViewData{
     
     //  model should call this when its done loading
+    [SVProgressHUD dismiss];
     _reloading = NO;
     [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
-    
 }
 
 #pragma mark -
@@ -130,27 +173,6 @@
     _refreshHeaderView = nil;
 }
 
-
--(void)viewDidAppear:(BOOL)animated
-{
-    
-
-}
-
-/**
- 加载本地数据
- */
--(void)loadLocalData
-{
-
-}
-/**
- 加载远端数据
- */
--(void)loadRemoteData
-{
-    
-}
 - (IBAction)endSearch:(id)sender {
     [self.tableView endEditing:YES];
 }
@@ -169,7 +191,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 200;
+    return 20;
 }
 
 

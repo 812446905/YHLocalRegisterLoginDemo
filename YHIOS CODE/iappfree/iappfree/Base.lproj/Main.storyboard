@@ -50,7 +50,7 @@
         <scene sceneID="dfB-5d-5hh">
             <objects>
                 <tableViewController title="限免" id="vza-ug-TQT" customClass="LimitFreeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="98" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="98" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

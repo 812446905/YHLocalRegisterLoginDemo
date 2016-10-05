@@ -10,6 +10,8 @@
 #import "YHTableViewCell.h"
 #import "AppDelegate.h"
 #import "EGORefreshTableHeaderView.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
 @interface LimitFreeTableViewController : UITableViewController<EGORefreshTableHeaderDelegate>
 @property (strong, nonatomic) EGORefreshTableHeaderView *refreshHeaderView;
 @property (assign, nonatomic) BOOL reloading;
