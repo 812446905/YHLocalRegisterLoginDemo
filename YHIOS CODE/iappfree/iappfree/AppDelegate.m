@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    self.reach = [Reachability reachabilityWithHostName:@"http://www.baidu.com"];
+    [self updateInterfaceWithReachability:self.reach];
+    self.status = [self.reach currentReachabilityStatus];
+    self.internetReach = [Reachability reachabilityForInternetConnection];
+    [self updateInterfaceWithReachability:self.internetReach];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *path = [paths firstObject];
     path = [path stringByAppendingPathComponent:@"YHApps.db"];
@@ -42,6 +48,50 @@
         return NO;
     }
     return YES;
+}
+
+-(void)reachabilityChanged:(NSNotification *)note
+{
+    Reachability *curReach = [note object];
+    [self updateInterfaceWithReachability:curReach];
+    NSLog(@)
+}
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    self.status = [reachability currentReachabilityStatus];
+    NSString* statusString = @"";
+    
+    switch (self.status)
+    {
+        case NotReachable:        {
+            statusString = @"无法连接到网络，请检查网络设置！";
+            //创建一个警报
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+            [alert show];
+            
+            break;
+        }
+            
+        case ReachableViaWWAN:        {
+            statusString = @"您当前正在使用蜂窝数据！";
+            //创建一个警报
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+            [alert show];
+            break;
+        }
+        case ReachableViaWiFi:        {
+            statusString= @"已连接到WiFi网络！";
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
+            [alert show];
+            break;
+        }
+    }
+}
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
 }
 
 
