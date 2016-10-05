@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "YHTableViewCell.h"
 #import "AppDelegate.h"
-@interface LimitFreeTableViewController : UITableViewController
-
+#import "EGORefreshTableHeaderView.h"
+@interface LimitFreeTableViewController : UITableViewController<EGORefreshTableHeaderDelegate>
+@property (strong, nonatomic) EGORefreshTableHeaderView *refreshHeaderView;
+@property (assign, nonatomic) BOOL reloading;
+- (void)reloadTableViewDataSource;
+- (void)doneLoadingTableViewData;;
 @end
