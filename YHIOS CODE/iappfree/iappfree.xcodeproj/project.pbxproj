@@ -18,6 +18,7 @@
 		EF4118211DA21EF800A3C143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4118201DA21EF800A3C143 /* Assets.xcassets */; };
 		EF4118241DA21EF800A3C143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4118221DA21EF800A3C143 /* LaunchScreen.storyboard */; };
 		EF4C6CD41DA40A90002910F1 /* YHApps.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C6CD31DA40A90002910F1 /* YHApps.m */; };
+		EF4C6CD71DA4B22E002910F1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4C6CD61DA4B22E002910F1 /* Reachability.m */; };
 		EF7409D91DA2FC5F00A20C6F /* YHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7409D81DA2FC5F00A20C6F /* YHTableViewCell.m */; };
 		EFA2200A1DA224180072EEC0 /* YHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA220081DA224180072EEC0 /* YHTabBarController.m */; };
 		EFA2200E1DA225EE0072EEC0 /* YHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA2200D1DA225EE0072EEC0 /* YHNavigationController.m */; };
@@ -51,6 +52,8 @@
 		EF4118251DA21EF800A3C143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4C6CD21DA40A90002910F1 /* YHApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHApps.h; sourceTree = "<group>"; };
 		EF4C6CD31DA40A90002910F1 /* YHApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHApps.m; sourceTree = "<group>"; };
+		EF4C6CD51DA4B22E002910F1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		EF4C6CD61DA4B22E002910F1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		EF7409D71DA2FC5F00A20C6F /* YHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHTableViewCell.h; path = Main/views/YHTableViewCell.h; sourceTree = "<group>"; };
 		EF7409D81DA2FC5F00A20C6F /* YHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHTableViewCell.m; path = Main/views/YHTableViewCell.m; sourceTree = "<group>"; };
 		EFA220071DA224180072EEC0 /* YHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHTabBarController.h; path = Main/controllers/YHTabBarController.h; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 		EFE562BA1DA3E7E700786BD2 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				EF4C6CD51DA4B22E002910F1 /* Reachability.h */,
+				EF4C6CD61DA4B22E002910F1 /* Reachability.m */,
 				EFE562A41DA3E72A00786BD2 /* fmdb */,
 			);
 			name = lib;
@@ -378,6 +383,7 @@
 				EFE562B11DA3E72A00786BD2 /* FMDatabase.m in Sources */,
 				EF0D61481DA2CE3D007486F5 /* FreeTableViewController.m in Sources */,
 				EFE562B21DA3E72A00786BD2 /* FMDatabaseAdditions.m in Sources */,
+				EF4C6CD71DA4B22E002910F1 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

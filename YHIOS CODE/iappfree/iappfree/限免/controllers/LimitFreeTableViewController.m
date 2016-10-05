@@ -7,9 +7,11 @@
 //
 
 #import "LimitFreeTableViewController.h"
-#import "YHTableViewCell.h"
-@interface LimitFreeTableViewController ()
 
+@interface LimitFreeTableViewController ()
+{
+    NSMutableArray *apps;
+}
 @end
 
 @implementation LimitFreeTableViewController
@@ -31,7 +33,59 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 //
 //    self.tabBarItem.selectedImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    self.reach = [Reachability reachabilityWithHostName:@"http://www.baidu.com"];
+    [self updateInterfaceWithReachability:self.reach];
+    NetworkStatus status = [self.reach currentReachabilityStatus];
+    self.internetReach = [Reachability reachabilityForInternetConnection];
+    [self updateInterfaceWithReachability:self.internetReach];
+   
 }
+-(void)reachabilityChanged:(NSNotification *)note
+{
+    Reachability *curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    NSString* statusString = @"";
+    
+    switch (netStatus)
+    {
+        case NotReachable:        {
+            statusString = @"无法连接到网络，请检查网络设置！";
+            //创建一个警报
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"友情提示" message:statusString preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            break;
+        }
+            
+        case ReachableViaWWAN:        {
+            statusString = @"您当前正在使用蜂窝数据！";
+            //创建一个警报
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"友情提示" message:statusString preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+            break;
+        }
+        case ReachableViaWiFi:        {
+            statusString= @"已连接到WiFi网络！";
+            break;
+        }
+    }
+}
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
+}
+
+
 - (IBAction)endSearch:(id)sender {
     [self.tableView endEditing:YES];
 }

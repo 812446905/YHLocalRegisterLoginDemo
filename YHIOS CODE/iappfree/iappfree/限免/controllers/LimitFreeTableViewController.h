@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YHTableViewCell.h"
+#import "Reachability.h"
 @interface LimitFreeTableViewController : UITableViewController
-
+@property (strong, nonatomic) Reachability *reach;
+@property (strong, nonatomic) Reachability *internetReach;
 @end
