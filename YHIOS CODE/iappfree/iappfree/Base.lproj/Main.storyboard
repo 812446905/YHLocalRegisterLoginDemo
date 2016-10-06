@@ -50,7 +50,7 @@
         <scene sceneID="dfB-5d-5hh">
             <objects>
                 <tableViewController title="限免" id="vza-ug-TQT" customClass="LimitFreeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="98" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="98" sectionHeaderHeight="18" sectionFooterHeight="18" id="jwV-IA-SF5">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -63,7 +63,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="limitFreeCell" editingAccessoryType="disclosureIndicator" rowHeight="98" id="KII-Tu-Lry" customClass="YHTableViewCell">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="98"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" tableViewCell="KII-Tu-Lry" id="7mm-PV-mU2">
                                     <frame key="frameInset" width="342" height="97.5"/>
@@ -81,7 +81,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1.动听音乐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a0O-Mw-vjL">
-                                            <frame key="frameInset" minX="96" minY="8" width="100" height="21"/>
+                                            <frame key="frameInset" minX="96" minY="8" width="173" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                             <nil key="textColor"/>
@@ -151,8 +151,17 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="IMGView" destination="dza-Zj-KLj" id="FkD-Lo-ZTB"/>
-                                    <outlet property="shareSaveDownloadLabel" destination="1Pg-fr-bMZ" id="ebg-Gj-8Rb"/>
+                                    <outlet property="appIcon" destination="dza-Zj-KLj" id="cGc-X1-UkI"/>
+                                    <outlet property="appNameLabel" destination="a0O-Mw-vjL" id="cH4-lW-re5"/>
+                                    <outlet property="categoryLabel" destination="amD-9x-sqR" id="JDl-f0-cLD"/>
+                                    <outlet property="freeCountDownLabel" destination="oeK-Pe-5Ig" id="DMa-iT-hbE"/>
+                                    <outlet property="originalPriceLabel" destination="6cb-Id-fHK" id="cpi-Rf-a1M"/>
+                                    <outlet property="shareSaveDownloadLabel" destination="1Pg-fr-bMZ" id="7ST-ck-ASg"/>
+                                    <outlet property="star1_image" destination="JO1-1s-0NY" id="qiV-Id-Gfz"/>
+                                    <outlet property="star2_image" destination="Kdh-6J-FPd" id="YxD-mh-L6j"/>
+                                    <outlet property="star3_image" destination="Sjg-K9-yAl" id="lDZ-ui-sKa"/>
+                                    <outlet property="star4_image" destination="AiQ-vt-Oi5" id="yCj-RC-Lbp"/>
+                                    <outlet property="star5_image" destination="zvY-FY-K82" id="dMh-RU-xDw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

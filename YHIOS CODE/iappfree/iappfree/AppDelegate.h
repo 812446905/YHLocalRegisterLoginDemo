@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FMDatabase.h"
 #import "Reachability.h"
+#import "SVProgressHUD.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) Reachability *reach;
 @property (strong, nonatomic) Reachability *internetReach;

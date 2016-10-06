@@ -59,10 +59,19 @@
 @property (strong, nonatomic) NSNumber *originalPrice;
 
 /**
- 是否处于限免中
+ 价格趋势，是限免还是优惠还是免费
  */
-@property (assign, nonatomic) BOOL isLimitedFree;
+@property (strong, nonatomic) NSString *priceTrend;
 
+/**
+ app图标URL字符串
+ */
+@property (strong, nonatomic) NSString *iconUrl;
+
+/**
+ app下载链接url字符串
+ */
+@property (strong, nonatomic) NSString *itunesUrl;
 /**
  app星级
  */
@@ -71,7 +80,7 @@
 /**
  限免到期时间
  */
-@property (strong, nonatomic) NSDate *expireDate;
+@property (strong, nonatomic) NSString *expireDate;
 
 /**
  app被下载次数
@@ -92,4 +101,15 @@
  app安装文件大小
  */
 @property (strong, nonatomic) NSNumber *fileSize;
+
+/**
+ 提供一个字典转模型的对象方法
+ */
+-(instancetype)initWithDict:(NSDictionary *)dict;
++(instancetype)appModelWithDict:(NSDictionary *)dict;
+
+/**
+ 获取图标
+ */
+-(UIImage *)getIconWithUrlString:(NSString *)strUrl;
 @end

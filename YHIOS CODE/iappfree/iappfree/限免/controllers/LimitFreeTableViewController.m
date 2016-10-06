@@ -12,6 +12,7 @@
 {
     //应用列表
     NSMutableArray *appList;
+    NSInteger page;//上拉到哪一页了，，初始值为1，每一次上拉，page+1
 }
 @end
 
@@ -35,6 +36,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 //
 //    self.tabBarItem.selectedImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    appList = [[NSMutableArray alloc]initWithCapacity:1000];
+    page = 1;
     //检查网络设置
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NetworkStatus netStatus = appDelegate.status;
@@ -47,16 +50,16 @@
         NSLog(@"客官，咋整的，没有联网，数据将从本地加载！");
         //从本地加载数据
         [self loadLocalData];
-       
+        
     }
     else
     {
         NSLog(@"哎呀，妈呀，网络杠杠的，将为你从远端获取数据！");
         //有网络，从远端加载数据
         [self loadRemoteData];
-       
+        
     }
-    [SVProgressHUD dismissWithDelay:1];
+   [SVProgressHUD dismissWithDelay:1];
     //创建下拉刷新控件
     if (_refreshHeaderView == nil) {
         
@@ -68,7 +71,7 @@
     }
     //  update the last update date
     [_refreshHeaderView refreshLastUpdatedDate];
-    
+   
     //增加上拉加载控件
     [self.tableView addFooterWithTarget:self action:@selector(loadTap)];
 }
@@ -82,7 +85,7 @@
  */
 -(void)loadLocalData
 {
-    
+    [appList removeAllObjects];
 
 }
 /**
@@ -90,14 +93,53 @@
  */
 -(void)loadRemoteData
 {
-    
-
+//    [appList removeAllObjects];
+    //从接口获取数据，接口是哪一个呢？
+    NSString *strUrl = [NSString stringWithFormat:@"http://iappfree.candou.com:8080/free/applications/limited?currency=rmb&page=%ld",(long)page];
+    NSURL *url = [NSURL URLWithString:strUrl];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+       
+        [self performSelectorOnMainThread:@selector(parseJsonData:) withObject:data waitUntilDone:NO];
+    }];
+    [task resume];
 }
-
+-(void)parseJsonData:(NSData *)data
+{
+    if (data) {
+        NSDictionary *applicationsDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        NSArray *applicationsArray = [applicationsDict valueForKeyPath:@"applications"];
+        if (applicationsArray.count>0)
+        {
+            for (NSDictionary *dict in applicationsArray)
+            {
+                YHApps *appModel = [YHApps appModelWithDict:dict];
+                appModel.icon = [appModel getIconWithUrlString:appModel.iconUrl];
+                NSLog(@"%@",appModel);
+                [appList addObject:appModel];
+            }
+            [self.tableView reloadData];
+        }
+        else
+        {
+            [SVProgressHUD showImage:[UIImage imageNamed:@"filedd"] status:@"数据加载失败，请稍后再试吧！"];
+            [SVProgressHUD dismissWithDelay:2 completion:^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否刷新重试？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"刷新一下" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    NSLog(@"刷新了");
+                }]];
+                [alert addAction:[UIAlertAction actionWithTitle:@"稍后再试吧！" style:UIAlertActionStyleCancel handler:nil]];
+                [self presentViewController:alert animated:YES completion:nil];
+            }];
+            
+        }
+    }
+}
 -(void)loadTap
 {
+    page++;
     [self.tableView reloadData];
-   
+    NSLog(@"加载到第%ld页了",page);
     [self.tableView footerEndRefreshing];
 }
 #pragma mark -
@@ -108,7 +150,22 @@
     //  should be calling your tableviews data source model to reload
     //  put here just for demo
     [SVProgressHUD showWithStatus:@"加载中..."];
+    //检查网络设置
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NetworkStatus netStatus = [appDelegate.reach currentReachabilityStatus];
+    if (netStatus==NotReachable) {
+        [SVProgressHUD showInfoWithStatus:@"网络连接断开，这就很尴尬了！"];
+        [self loadLocalData];
+        [self.tableView reloadData];
+    }
+    else
+    {
+        [self loadRemoteData];
+        [self.tableView reloadData];
+    }
+
     [self SVProgressHUDShowSetting];
+    [self performSelectorInBackground:@selector(loadMore) withObject:nil];
     _reloading = YES;
     
 }
@@ -121,9 +178,41 @@
 - (void)doneLoadingTableViewData{
     
     //  model should call this when its done loading
+    
     [SVProgressHUD dismiss];
     _reloading = NO;
     [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+}
+-(void)loadMore
+
+{
+    
+    NSMutableArray *more;
+    
+    //加载你的数据
+    
+    [self performSelectorOnMainThread:@selector(appendTableWith:) withObject:more waitUntilDone:NO];
+    
+}
+-(void)appendTableWith:(NSMutableArray *)data
+{
+    for (int i=0;i<[data count];i++) {
+        
+        [appList addObject:[data objectAtIndex:i]];
+        
+    }
+    
+    NSMutableArray *insertIndexPaths = [NSMutableArray arrayWithCapacity:10];
+    
+    for (int ind = 0; ind < [data count]; ind++) {
+        
+        NSIndexPath *newPath =  [NSIndexPath indexPathForRow:[appList indexOfObject:[data objectAtIndex:ind]] inSection:0];
+        
+        [insertIndexPaths addObject:newPath];
+        
+    }
+    
+    [self.tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark -
@@ -132,6 +221,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     [_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+//     [self loadRemoteData];
     
 }
 
@@ -148,11 +238,12 @@
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
     
     [self reloadTableViewDataSource];
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:3.0];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:.0];
     
 }
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
+//    [self loadRemoteData];
     
     return _reloading; // should return if data source model is reloading
     
@@ -191,7 +282,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 20;
+    return appList.count;
 }
 
 
@@ -200,7 +291,11 @@
     if (cell==nil) {
         cell = [[YHTableViewCell alloc]init];
     }
-   
+    YHApps *myApp = appList[indexPath.row];
+    cell.appNameLabel.text = [NSString stringWithFormat:@"%ld.%@",indexPath.row+1,myApp.appName];
+    cell.appIcon.image = myApp.icon;
+    NSLog(@"%@",myApp.icon);
+//    cell.appNameLabel.text = [NSString stringWithFormat:@"%ld.第%ld个应用",indexPath.row+1,indexPath.row+1];
     return cell;
 }
 

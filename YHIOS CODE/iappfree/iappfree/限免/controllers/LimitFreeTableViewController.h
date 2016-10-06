@@ -12,6 +12,7 @@
 #import "EGORefreshTableHeaderView.h"
 #import "MJRefresh.h"
 #import "SVProgressHUD.h"
+#import "YHApps.h"
 @interface LimitFreeTableViewController : UITableViewController<EGORefreshTableHeaderDelegate>
 @property (strong, nonatomic) EGORefreshTableHeaderView *refreshHeaderView;
 @property (assign, nonatomic) BOOL reloading;

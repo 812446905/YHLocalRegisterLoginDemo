@@ -9,9 +9,7 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
 @end
-
 @implementation AppDelegate
 
 
@@ -37,7 +35,7 @@
         return NO;
     }
     //创建表
-    b = [_db executeUpdate:@"create table if not exists apps(appId integer,appName text,appDescription text,appCategory text,icon blob,originalPrice integer,limitedFree text,starLevel integer,expireDate text,downloadCount integer,shareCount integer,favoriteCount integer,fileSize integer)"];
+    b = [_db executeUpdate:@"create table if not exists apps(appId integer,appName text,appDescription text,appCategory text,icon blob,originalPrice integer,priceTrend text,starLevel integer,expireDate text,downloadCount integer,shareCount integer,favoriteCount integer,fileSize integer)"];
     if (!b) {
         //创建一个警报
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"创建数据表失败，应用将终止！" preferredStyle:UIAlertControllerStyleAlert];
@@ -57,6 +55,8 @@
         NSString *statusString = @"目前没有网络，请检查网络设置！";
         UIAlertView *alert1 = [[UIAlertView alloc]initWithTitle:@"友情提示" message: statusString delegate:self cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil];
         [alert1 show];
+//         [SVProgressHUD showInfoWithStatus:@"网络连接断开，这就很尴尬了！"];
+////        [SVProgressHUD dismissWithDelay:1];
     }
 }
 - (void)dealloc
