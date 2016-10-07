@@ -12,6 +12,7 @@
 {
     //应用列表
     NSMutableArray *appList;
+    NSMutableArray *tempArr;
     NSInteger page;//上拉到哪一页了，，初始值为1，每一次上拉，page+1
 }
 @end
@@ -36,12 +37,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 //
 //    self.tabBarItem.selectedImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+     tempArr = [NSMutableArray arrayWithCapacity:10];
     appList = [[NSMutableArray alloc]initWithCapacity:1000];
-    page = 1;
+   
     //检查网络设置
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    NetworkStatus netStatus = appDelegate.status;
-    NSLog(@"%ld",(long)netStatus);
+    NetworkStatus netStatus = [appDelegate.reach currentReachabilityStatus];
+//    NSLog(@"%ld",(long)netStatus);
     [SVProgressHUD showWithStatus:@"加载中..."];
     [self SVProgressHUDShowSetting];
     //判断网络状态
@@ -54,9 +56,15 @@
     }
     else
     {
+        page = 1;
         NSLog(@"哎呀，妈呀，网络杠杠的，将为你从远端获取数据！");
         //有网络，从远端加载数据
         [self loadRemoteData];
+        [self reloadTableViewDataSource];
+        [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:.0];
+
+        NSLog(@"%ld",appList.count);
+        [self.tableView reloadData];
         
     }
    [SVProgressHUD dismissWithDelay:1];
@@ -74,6 +82,7 @@
    
     //增加上拉加载控件
     [self.tableView addFooterWithTarget:self action:@selector(loadTap)];
+  ;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -93,7 +102,6 @@
  */
 -(void)loadRemoteData
 {
-//    [appList removeAllObjects];
     //从接口获取数据，接口是哪一个呢？
     NSString *strUrl = [NSString stringWithFormat:@"http://iappfree.candou.com:8080/free/applications/limited?currency=rmb&page=%ld",(long)page];
     NSURL *url = [NSURL URLWithString:strUrl];
@@ -101,7 +109,7 @@
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
        
         [self performSelectorOnMainThread:@selector(parseJsonData:) withObject:data waitUntilDone:NO];
-    }];
+         }];
     [task resume];
 }
 -(void)parseJsonData:(NSData *)data
@@ -111,13 +119,14 @@
         NSArray *applicationsArray = [applicationsDict valueForKeyPath:@"applications"];
         if (applicationsArray.count>0)
         {
+            
             for (NSDictionary *dict in applicationsArray)
             {
                 YHApps *appModel = [YHApps appModelWithDict:dict];
                 appModel.icon = [appModel getIconWithUrlString:appModel.iconUrl];
-                NSLog(@"%@",appModel);
-                [appList addObject:appModel];
+                [tempArr addObject:appModel];
             }
+            [appList addObjectsFromArray:tempArr];
             [self.tableView reloadData];
         }
         else
@@ -131,16 +140,17 @@
                 [alert addAction:[UIAlertAction actionWithTitle:@"稍后再试吧！" style:UIAlertActionStyleCancel handler:nil]];
                 [self presentViewController:alert animated:YES completion:nil];
             }];
-            
         }
     }
 }
 -(void)loadTap
 {
-    page++;
+    [self reloadTableViewDataSource];
     [self.tableView reloadData];
-    NSLog(@"加载到第%ld页了",page);
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:.0];
+
     [self.tableView footerEndRefreshing];
+      
 }
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
@@ -149,6 +159,7 @@
     
     //  should be calling your tableviews data source model to reload
     //  put here just for demo
+    NSLog(@"这个reloadTableView方法被调用了!");
     [SVProgressHUD showWithStatus:@"加载中..."];
     //检查网络设置
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -160,12 +171,18 @@
     }
     else
     {
+         page++;
         [self loadRemoteData];
+        [appList addObjectsFromArray:tempArr];
+         NSLog(@"加载到第%ld页了",page);
+        NSLog(@"%ld",tempArr.count);
+        NSLog(@"%ld",appList.count);
         [self.tableView reloadData];
     }
 
     [self SVProgressHUDShowSetting];
-    [self performSelectorInBackground:@selector(loadMore) withObject:nil];
+    [self loadRemoteData];
+    [self performSelectorInBackground:@selector(loadMore:) withObject:tempArr];
     _reloading = YES;
     
 }
@@ -180,14 +197,14 @@
     //  model should call this when its done loading
     
     [SVProgressHUD dismiss];
+    NSLog(@"这个doneloading方法被调用了!");
     _reloading = NO;
-    [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+//    [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
 }
--(void)loadMore
-
+-(void)loadMore:(NSMutableArray *)more
 {
     
-    NSMutableArray *more;
+//    NSMutableArray *more
     
     //加载你的数据
     
@@ -196,15 +213,15 @@
 }
 -(void)appendTableWith:(NSMutableArray *)data
 {
-    for (int i=0;i<[data count];i++) {
-        
-        [appList addObject:[data objectAtIndex:i]];
-        
-    }
+//    for (int i=0;i<[data count];i++) {
+//        
+//        [appList addObject:[data objectAtIndex:i]];
+//    }
+    [appList addObjectsFromArray:data];
     
     NSMutableArray *insertIndexPaths = [NSMutableArray arrayWithCapacity:10];
     
-    for (int ind = 0; ind < [data count]; ind++) {
+    for (int ind = 0; ind < tempArr.count; ind++) {
         
         NSIndexPath *newPath =  [NSIndexPath indexPathForRow:[appList indexOfObject:[data objectAtIndex:ind]] inSection:0];
         
@@ -239,7 +256,7 @@
     
     [self reloadTableViewDataSource];
     [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:.0];
-    
+     [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
 }
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
@@ -294,7 +311,7 @@
     YHApps *myApp = appList[indexPath.row];
     cell.appNameLabel.text = [NSString stringWithFormat:@"%ld.%@",indexPath.row+1,myApp.appName];
     cell.appIcon.image = myApp.icon;
-    NSLog(@"%@",myApp.icon);
+//    NSLog(@"%@",myApp.icon);
 //    cell.appNameLabel.text = [NSString stringWithFormat:@"%ld.第%ld个应用",indexPath.row+1,indexPath.row+1];
     return cell;
 }
